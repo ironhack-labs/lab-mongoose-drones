@@ -149,6 +149,8 @@ The `Drone` model should have:
 5. Run the seed file with `node` to seed your database.
 6. Check the database with the `mongo` command to confirm that your data was saved.
 
+### Hints
+
 Before your start using the model in **Step 4**, you need to require Mongoose, require the `Drone` model and call Mongoose's `connect` method to connect to the database.
 
 For the drones array in **Step 4**, it should look something like this:
@@ -197,6 +199,7 @@ Here's the route we will be using:
 5. In the `views/index.ejs` (homepage) view file:
     - Add a link that goes to the `/drones` route.
 
+### Hints
 
 For **Step 2**, this will be the first time you use the `Drone` model in a route. Remember to require the `models/drone.js` file to be able to use it.
 
@@ -235,6 +238,8 @@ Here's the route we will be using:
     - Display tags with the drone's `droneName`, `propellers` and `maxSpeed`.
 5. In the `views/drones/index.ejs` view file:
     - As part of the loop, add a link that goes to the `/drones/:id` route with the `:id` replaced by the actual drone's id.
+
+### Hints
 
 The `findById` method in **Step 2** requires the drone's id. You'll be getting that from `req.params`.
 
@@ -279,6 +284,8 @@ Here are the routes we will be using:
     - Call the `save` method to save the new drone to the database.
     - If there's an error, call the route's `next` function and return.
     - If there isn't an error, redirect to the list of drones page (GET `/drones`).
+
+### Hints
 
 For **Step 4**, your form will look something like this:
 
@@ -327,6 +334,8 @@ Here's the route we will be using:
     - If there's an error, call the route's `next` function and return.
     - If there isn't an error, redirect to the list of drones page (GET `/drones`).
 
+### Hints
+
 For your **Step 1** form that goes in the loop, it should look like this:
 
 ```htmlmixed
@@ -373,6 +382,8 @@ Here are the routes we will be using:
     - Call the `Drone` model's `findByIdAndUpdate` method with drone's id and the object you made in the previous step.
     - If there's an error, call the route's `next` function and return.
     - If there isn't an error, redirect to the drone's details page (GET `/drones/:id`).
+
+### Hints
 
 For **Step 4**, your form will look something like this:
 
