@@ -3,34 +3,35 @@
 # PP | Basic CRUD with Drones
 
 ## Learning Goals
+
+After this learning unit, you should be able to:
+
 - Create a basic web application using Express.
 - Use Mongoose in an Express application.
-- Perform CRUD actions on your database of a single Mongoose model through your web application.
-
+- Perform CRUD actions on your database with a single Mongoose model through your web application.
 
 ## Requirements
 
 - [Fork this repo](https://guides.github.com/activities/forking/)
 - Clone your fork into your `~/code/labs` folder.
 
-
 ## Submission
 
-Upon completion, run the following commands
-```
+Upon completion, run the following commands:
+
+```bash
 $ git add .
 $ git commit -m "done"
 $ git push origin master
 ```
+
 Navigate to your repo and create a Pull Request -from your master branch to the original repository master branch.
 
 In the Pull request name, add your name and last names separated by a dash "-".
 
-
 ## Deliverables
 
 All the files that make your Express/Mongoose app work, including your `drones.js` routes file and your `drone.js` model file.
-
 
 ## Introduction
 
@@ -191,7 +192,7 @@ Here's the route we will be using:
     - Call the `Drone` model's `find` method to retrieve all the drones.
     - If there's an error, call the route's `next` function and return.
     - If there isn't an error, render the `drones/index` view.
-    - Pass the variable with the array of drones into the view. 
+    - Pass the variable with the array of drones into the view.
 3. Create the `index.ejs` view file inside the `views/drones/` folder.
 4. In the `views/drones/index.ejs` view file:
     - Add an `<h2>` tag for the page's heading.
@@ -418,5 +419,4 @@ For **Step 5**, `href` attributes in the `<a>` tags that go in your loop will lo
 
 By now you should know that the methods in **Step 2** and **Step 7** requires the drone's id. You'll be getting that from `req.params`.
 
-
-# That's it!
+/Happy coding!
