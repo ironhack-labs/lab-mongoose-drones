@@ -17,11 +17,16 @@ router.get('/drones', (req, res, next) => {
 
 
 router.get('/drones/new', (req, res, next) => {
-  // Iteration #4
+  res.render('drones/new');
 });
 
 router.post('/drones', (req, res, next) => {
-  // Iteration #4
+  const body=req.body;
+  const newDrone = new Drone(body);
+  newDrone.save(function(err,doc){
+    if (err) return next(err);
+    res.redirect('drones');
+  });
 });
 
 
