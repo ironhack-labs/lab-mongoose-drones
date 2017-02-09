@@ -1,13 +1,17 @@
+/*jshint esversion: 6*/
+
 const express = require('express');
-
-// require the Drone model here
-
 const router = express.Router();
+const Drone = require('../models/drone');
 
 
 router.get('/drones', (req, res, next) => {
-  // Iteration #2
+  Drone.find({},function (err,drones){
+    if (err) return next(err)
+    res.render('drones/index', { drones, title: "Drones" });
+  });
 });
+
 
 
 router.get('/drones/new', (req, res, next) => {
@@ -20,8 +24,14 @@ router.post('/drones', (req, res, next) => {
 
 
 router.get('/drones/:id', (req, res, next) => {
-  // Iteration #3
-});
+
+   let droneId = req.params.id;
+   console.log('we are in /drones/id');
+   Drone.findById(droneId, (err, droneDetails)=>{
+     if (err) { return next(err); }
+     res.render('drones/show', {droneDetails});
+  });
+  });
 
 
 router.get('/drones/:id/edit', (req, res, next) => {
