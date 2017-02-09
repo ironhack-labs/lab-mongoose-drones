@@ -1,0 +1,11 @@
+<h2>DRONE LIST </h2>
+      <%drones.forEach((elem)=>{%>
+        <li><a href="/drones/<%=elem._id%>">
+        <%=elem.droneName%></a> <a href="/drones/<%=elem._id%>/edit">EDIT</a>
+        <form action="/drones/<%=elem._id%>/delete" method="post">
+          <button type="submit" name="button">X</button>
+        </form>
+        </li>
+        <%});%>
+        <p><a href="/drones/new"> NEW DRONE</a>
+        </p>
