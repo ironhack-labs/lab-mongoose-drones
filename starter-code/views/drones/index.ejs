@@ -1,0 +1,11 @@
+<h2>My Drones</h2>
+
+<ul>
+    <% drones.forEach((drone) =>{ %>
+        <li><a href="/drones/<%=drone._id%>"><%=drone.name%></a></li>
+        <form method="post" action="/drones/<%= drone._id%>/delete">
+         <button> Delete </button>
+        </form>
+    <% }); %>
+    <li><a href="/drones/new">Create a new Drone</a></li>
+</ul>
