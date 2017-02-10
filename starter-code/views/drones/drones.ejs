@@ -1,0 +1,8 @@
+<h2><%= title %></h2>
+<ul>
+  <% drones.forEach((item) => { %>
+    <li><%= item.droneName %></li>   <a href="/drones/<%=item._id%>">Delete</a>
+ <% }) %>
+ </ul>
+
+ <a href="drones/new"> Add a new drone!</a>
