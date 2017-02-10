@@ -1,1 +1,11 @@
 <p>Welcome to <%= title %></p>
+
+<h2>
+  <ul>
+      <% drones.forEach((drones) => { %>
+      <li><a href="/drones/<%= drones._id%>">Name: <%= drones.droneName %>, propellers: <%= drones.propellers%></a>
+      </li>
+          <% }) %>
+    </ul>
+    <a href=''>drones route</a>
+</h2>
