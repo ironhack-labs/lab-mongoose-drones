@@ -41,11 +41,11 @@ Though their origins lie in military applications, they are used in business, ag
 
 Amazon is even trying to use them [to deliver packages](https://www.amazon.com/Amazon-Prime-Air/b?node=8037720011).
 
-![Amazon Prime Air drone](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_bda276188d5ae221165fb64133f11309.jpg)
+![Amazon Prime Air drone](images/prime-drone.jpg)
 
 Hopefully you won't have one of these after you:
 
-![General Atomics MQ-9 Reaper, a military drone.](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_76e24367e2d93f971d5a529f37350665.jpg)
+![General Atomics MQ-9 Reaper, a military drone.](images/reaper.jpg)
 
 Let's create an app for the drone enthusiast using Express and Mongoose! Maybe the drones will spare us when they take over everything.
 
@@ -125,6 +125,8 @@ app.use('/', drones);
 ```
 
 Now that we know what we are starting with, let's get to coding!
+
+![Let's go](images/lets-go.gif)
 
 
 ## Iteration #1: `Drone` model
