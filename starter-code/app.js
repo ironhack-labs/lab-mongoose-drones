@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+// const layoutExpress = require('express-ejs-layouts')
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 
@@ -11,14 +12,14 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 const drones = require('./routes/drones');
 
-mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect('mongodb://localhost/W4D5E1');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.set('layout', 'layout/main-layout');
 app.use(expressLayouts);
 app.locals.title = 'Drnz';
 
@@ -29,7 +30,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+// app.use(expressLayouts);
 app.use('/', index);
 app.use('/users', users);
 app.use('/', drones);
