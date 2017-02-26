@@ -1,0 +1,7 @@
+<h2>Available drones: </h2>
+<ul>
+ <% drones.forEach( drone =>{ %>
+  <li> <a href="/drones/<%=drone._id%> "> <%=drone.droneName%> </a></li>
+<% }) %>
+</ul>
+<a href="/drones/new"><button>Add new drone</button></a>
