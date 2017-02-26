@@ -1,0 +1,9 @@
+<h2>Drone details : </h2>
+<a href="/drones"><button>Back</button></a>
+<p>Name: <%=drone.droneName%></p>
+<p>Propellers: <%=drone.propellers%></p>
+<p>Maximum speed: <%=drone.maxSpeed%></p>
+<form method="post" action="/drones/<%= drone._id %>/delete">
+<button> Delete </button>
+</form>
+<a href="/drones/<%= drone._id %>/edit"><button>Edit</button></a>
