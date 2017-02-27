@@ -65,7 +65,14 @@ router.post('/drones/:id', (req, res, next) => {
 
 
 router.post('/drones/:id/delete', (req, res, next) => {
-  // Iteration #5 (Bonus)
+  let droneId = req.params.id;
+  Drone.findByIdAndRemove({_id: droneId}, (err, drones) => {
+    if (err) {
+      next(err);
+      return;
+    }
+    res.redirect('/drones');
+  });
 });
 
 

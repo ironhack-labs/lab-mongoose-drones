@@ -7,6 +7,9 @@
     <li>
       <p><a href = "/drones/<%= oneDrone._id %>">Details</a> </p>
     </li>
+    <form method="post" action="/drones/<%= oneDrone._id %>/delete">
+      <button> Delete </button>
+    </form>
     <% }) %>
 
   </ul>
