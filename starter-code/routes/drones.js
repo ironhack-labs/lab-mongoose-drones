@@ -29,7 +29,18 @@ router.post('/drones', (req, res, next) => {
 
 
 router.get('/drones/:id', (req, res, next) => {
-  // Iteration #3
+  const droneId = req.params.id;
+
+  Drone.findById(droneId, (err, drone) => {
+    if (err) {
+      next(err);
+    }
+    res.render('drones/show', {
+      name: drone.droneName,
+      propellers: drone.propellers,
+      maxSpeed: drone.maxSpeed
+    });
+  });
 });
 
 

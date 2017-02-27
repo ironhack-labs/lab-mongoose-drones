@@ -1,7 +1,7 @@
 <ul>
 <% drones.forEach((drone) => { %>
   <li>
-    <p> <%=drone.droneName %> </p>
+    <a href = "/drones/<%=drone._id%>"><p> <%=drone.droneName %> </p></a>
   </li>
 <% }) %>
 </ul>
