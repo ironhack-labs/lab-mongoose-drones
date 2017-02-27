@@ -1,27 +1,22 @@
 // Iteration #1
 const mongoose = require('mongoose');
-
-// mongoose.connect('mongodb://localhost/ironshopDev');
-mongoose.connect('mongodb://localhost/drones');
-
-// const Product = require('../models/product.js');
+mongoose.connect('mongodb://localhost/drones-dev');
 const Drone = require('../models/drone.js');
 
 // const products = [
 const drones = [
-
   {
-    name: 'DJI Phantom 4',
+    droneName: 'DJI Phantom 4',
     maxSpeed: 44.74, //mph
     propellers: 4
   },
   {
-    name: 'DJI Mavic Pro: The Smart Foldable Drone',
+    droneName: 'DJI Mavic Pro: The Smart Foldable Drone',
     maxSpeed: 40, //mph
     propellers: 4
   },
   {
-    name: 'GoPro Karma: Explore Now',
+    droneName: 'GoPro Karma: Explore Now',
     maxSpeed: 35, //mph
     propellers: 4
   }
@@ -31,13 +26,13 @@ const drones = [
   //                  |
   //      -------------
   //      |
-Drone.create(products, (err, docs) => {
+Drone.create(drones, (err, docs) => {
   if (err) {
     throw err;
   }
 
-  docs.forEach((oneProduct) => {
-    console.log(`${oneProduct.name} ${oneProduct._id}`);
+  docs.forEach((oneDrone) => {
+    console.log(`${oneDrone.droneName} ${oneDrone._id}`);
   });
 
   mongoose.disconnect();
