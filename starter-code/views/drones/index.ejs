@@ -1,0 +1,12 @@
+<h2> Drones In Action :</h2>
+    <ul>
+    <% drones.forEach((oneDrone) => { %>
+    <li>
+      <p> <%= oneDrone.droneName %> </p>
+    </li>
+    <li>
+      <p><a href = "/drones/<%= oneDrone._id %>">Details</a> </p>
+    </li>
+    <% }) %>
+
+  </ul>
