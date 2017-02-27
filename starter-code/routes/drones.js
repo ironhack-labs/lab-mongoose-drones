@@ -1,12 +1,21 @@
 const express = require('express');
 
-// require the Drone model here
+const Drone = require('../models/drone.js');
 
 const router = express.Router();
 
 
 router.get('/drones', (req, res, next) => {
-  // Iteration #2
+  Drone.find((err, drones) => {
+    if (err) {
+      next(err);
+      return;
+    }
+
+    res.render('drones/index.ejs', {
+      drones: drones
+    });
+  });
 });
 
 
@@ -20,7 +29,18 @@ router.post('/drones', (req, res, next) => {
 
 
 router.get('/drones/:id', (req, res, next) => {
-  // Iteration #3
+  const droneId = req.params.id;
+
+  Drone.findById(droneId, (err, drone) => {
+    if (err) {
+      next(err);
+    }
+    res.render('drones/show', {
+      name: drone.droneName,
+      propellers: drone.propellers,
+      maxSpeed: drone.maxSpeed
+    });
+  });
 });
 
 
