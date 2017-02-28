@@ -1,0 +1,20 @@
+<h2> Edit your drone </h2>
+
+<form method="post" action="/drones/<%= drone._id %>">
+  <div>
+    <label for="droneName"> Model Name: </label>
+    <input type="text" name="droneName" id="droneName" value="<%= drone.droneName %>">
+  </div>
+
+  <div>
+    <label for="propellers"> Number of Propellers: </label>
+    <input type="number" name="propellers" id="propellers" value="<%= drone.propellers %>">
+  </div>
+
+  <div>
+    <label for="maxSpeed"> Maximum Speed (meters per second): </label>
+    <input type="number" name="maxSpeed" id="maxSpeed" value="<%= drone.maxSpeed %>">
+  </div>
+
+  <button> Update this drone </button>
+</form>

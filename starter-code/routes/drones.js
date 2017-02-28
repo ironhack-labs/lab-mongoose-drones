@@ -23,13 +23,13 @@ router.get('/drones/new', (req, res, next) => {
 });
 
 router.post('/drones', (req, res, next) => {
-  const droneInfo = {
+  let droneInfo = {
     droneName: req.body.droneName,
     propellers: req.body.propellers,
     maxSpeed: req.body.maxSpeed
   };
 
-  const theDrone = new Drone(droneInfo);
+  let theDrone = new Drone(droneInfo);
 
   theDrone.save((err, next) => {
     if (err) {
@@ -56,17 +56,43 @@ let droneId = req.params.id;
 
 
 router.get('/drones/:id/edit', (req, res, next) => {
-  // Iteration #6 (Bonus)
+let droneId = req.params.id;
+  Drone.findOne({_id: droneId}, (err,drones) => {
+    if (err) {
+      next(err);
+      return;
+    }
+    res.render('drones/edit', {
+      drones: drones
+    });
+  });
 });
 
 router.post('/drones/:id', (req, res, next) => {
-  // Iteration #6 (Bonus)
+  let droneInfo = {
+    droneName: req.body.droneName,
+    propellers: req.body.propellers,
+    maxSpeed: req.body.maxSpeed
+  };
+
+let theDrone = new Drone(droneInfo);
+
+  theDrone.findOneAndUpdate({_id: droneInfo._id},(err,next) => {
+    if (err) {
+      next(err);
+      return;
+    }
+//
+    res.redirect('/drones/:id');
+  });
+
+
 });
 
 
 router.post('/drones/:id/delete', (req, res, next) => {
   let droneId = req.params.id;
-  Drone.findByIdAndRemove({_id: droneId}, (err, drones) => {
+  Drone.findByIdAndRemove(droneId, (err, drones) => {
     if (err) {
       next(err);
       return;
