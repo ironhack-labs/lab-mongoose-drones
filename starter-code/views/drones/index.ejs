@@ -1,0 +1,16 @@
+<h2> Drones In Action :</h2>
+    <ul>
+    <% drones.forEach((oneDrone) => { %>
+    <li>
+      <p> <%= oneDrone.droneName %> </p>
+    </li>
+    <li>
+      <p><a href = "/drones/<%= oneDrone._id %>">Details</a> </p>
+      <p><a href = "/drones/<%= oneDrone._id %>/edit">Edit</a> </p>
+    </li>
+    <form method="post" action="/drones/<%= oneDrone._id %>/delete">
+      <button> Delete </button>
+    </form>
+    <% }) %>
+
+  </ul>
