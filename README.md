@@ -250,8 +250,8 @@ For **Step 4**, your form will look something like this:
 ```htmlmixed
 <form method="post" action="/drones">
   <div>
-    <label for="droneName"> Model Name: </label>
-    <input type="text" name="droneName" id="droneName">
+    <label for="drone-name"> Model Name: </label>
+    <input type="text" name="droneName" id="drone-name">
   </div>
 
   <div>
@@ -260,8 +260,8 @@ For **Step 4**, your form will look something like this:
   </div>
 
   <div>
-    <label for="maxSpeed"> Maximum Speed (meters per second): </label>
-    <input type="number" name="maxSpeed" id="maxSpeed">
+    <label for="max-speed"> Maximum Speed (meters per second): </label>
+    <input type="number" name="maxSpeed" id="max-speed">
   </div>
 
   <button> Add this drone </button>
