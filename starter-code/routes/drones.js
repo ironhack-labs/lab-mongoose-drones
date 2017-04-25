@@ -20,7 +20,7 @@ router.get('/drones', (req, res, next) => {
   });
 });
 
-//=== Get the and render  the view for   ================
+//=== Get  and render  the view for   ================
 //======== the form of new drones   =====================
 router.get('/drones/new', (req, res, next) => {
   // Iteration #3
