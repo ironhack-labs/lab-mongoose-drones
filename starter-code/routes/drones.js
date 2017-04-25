@@ -1,9 +1,8 @@
 const express = require('express');
+const router = express.Router();
 
 // require the Drone model here
 const Drone = require('../models/drone.js');
-
-const router = express.Router();
 
 // ===   Render a list of Drones and sends ================
 //====   the list with dronesList variable ================
@@ -41,6 +40,8 @@ router.post('/drones', (req, res, next) => {
     droneName: req.body.droneName,
     propellers: req.body.propellers,
     maxSpeed: req.body.maxSpeed,
+    description: req.body.description,
+    imageUrl: req.body.imageUrl,
   }
 const newDrone = new Drone(newDroneInfo);
 newDrone.save( (err) => {

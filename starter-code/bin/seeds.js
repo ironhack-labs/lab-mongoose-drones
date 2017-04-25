@@ -8,9 +8,9 @@ const Drone = require('../models/drone.js');
 
 
 const drones = [
-  { droneName: 'Creeper XL 500', propellers: 3, maxSpeed: 12 },
-  { droneName: 'Racer 57', propellers: 4, maxSpeed: 20 },
-  { droneName: 'Courier 3000i', propellers: 6, maxSpeed: 18 }
+  { droneName: 'Creeper XL 500', propellers: 3, maxSpeed: 12,description: "flying drone 1", imageUrl:'../images/prime-drone.jpg' },
+  { droneName: 'Racer 57', propellers: 4, maxSpeed: 20, description: "flying drone 2", imageUrl:'../images/prime-drone.jpg' },
+  { droneName: 'Courier 3000i', propellers: 6, maxSpeed: 18 , description: "flying drone 3", imageUrl:'../images/prime-drone.jpg'}
 ];
 
 
@@ -21,7 +21,7 @@ Drone.create(drones, (err, droneDocs) => {
   }
 
   droneDocs.forEach((oneDrone) => {
-    console.log(`NEW DRONE ${oneDrone.droneName} -> ${oneDrone._id}`);
+    console.log(`NEW DRONE ${oneDrone.imageUrl} -> ${oneDrone._id}`);
   });
   mongoose.disconnect();
 });
