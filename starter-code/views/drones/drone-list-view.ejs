@@ -1,0 +1,19 @@
+
+<h2>Drones</h2>
+<div class="container">
+<div class="row">
+    <% drones.forEach((oneDrone) => { %>
+        <div class=" col-md-4">
+            <div class="drone">
+                <img src="<%= oneDrone.droneImg %>" style="width: 200px;"><br>
+                <h3><%= oneDrone.droneName %></h3>
+                <p>Number of Propellers: <%= oneDrone.propellers %>     </p>
+                <p>Max Speed: <%= oneDrone.maxSpeed %> mph</p>
+            </div>
+        </div>
+    <% }) %>
+</div>
+</div>
+<div class="addDrone">
+    <a href="/drones/new">Add a New Drone</a>
+</div>
