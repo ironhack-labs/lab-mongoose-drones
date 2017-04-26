@@ -8,7 +8,7 @@ const droneSchema = new Schema({
   propellers: { type: Number, default: 3},
   maxSpeed:{ type: Number, default: 0},
   description:{ type: String },
-  imageUrl: { type: String, default: '/images/box.gif' },
+  imageUrl: { type: String },
 
 });
 
