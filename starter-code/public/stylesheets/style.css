@@ -13,19 +13,20 @@ h1{
 a {
   padding-right: 30px;
   font-size: 20px;
+  color: blue;
 }
 
-a:link{
+a:link {
   padding: 20px;
 }
 
-footer{
+footer {
   position: absolute;
   bottom: 45px;
   font-size: 30px;
 }
 
-div.scroll{
+div.scroll {
   padding-top: 20px;
   height: 270px;
   overflow: scroll;
