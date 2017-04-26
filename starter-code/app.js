@@ -23,6 +23,7 @@ app.use(expressLayouts);
 app.locals.title = 'Drnz';
 
 // uncomment after placing your favicon in /public
+// Ok 
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
