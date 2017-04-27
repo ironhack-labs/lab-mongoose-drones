@@ -1,0 +1,7 @@
+  <h2>TIPOS DE DRONES</h2>
+
+<% drones.forEach( drone => { %>
+  <p>El nombre del dron es: <%= drone.droneName %></p>
+  <p>El dron tiene hélices nª <%=drone.propellers %></p>
+  <p>Velocidad máxima<%= drone.maxSpeed %></p><br>
+<% }) %>
