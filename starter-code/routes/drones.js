@@ -36,6 +36,7 @@ router.post('/drones/new', (req, res, next) => {
   const theDrone = new Drone({
     //this value comes from the input form that is being posted...to the body
     //make sure that the key names match the key names of the DB
+    //as defined in the SCHEMA
     droneName:         `${req.body.droneBrand} ${req.body.droneModel}`,
     dronePrice:        req.body.dronePrice,
     droneImg:          req.body.droneUrl,
@@ -50,6 +51,7 @@ router.post('/drones/new', (req, res, next) => {
       return;
     }
               //localhost:3000/drones
+              //use a real web address, that is already defined in the routes
     res.redirect('/drones');
   });
 });

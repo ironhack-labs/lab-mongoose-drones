@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+.container {
+  width: 100%;
+  min-height: 800px;
+}
+
+.content li {
+  background: #fff;
+}
+
+img {
+  width: 800px;
+}
