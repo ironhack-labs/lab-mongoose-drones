@@ -1,0 +1,14 @@
+<h2>
+  Views > Drones > Index File
+</h2>
+
+<div class="mainVp">
+
+<% dl.forEach((oneDrone) => { %>
+  <ol>
+    <li><a href="http://www.google.com/#safe=off&q=<%= oneDrone.droneName %>"> <%= oneDrone.droneName %> - <%= oneDrone.propellers %> propellers - <%= oneDrone.maxSpeed %> MPH </a></li>
+    <br>
+  </ol>
+<% }) %>
+
+</div>
