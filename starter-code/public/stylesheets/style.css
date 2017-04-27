@@ -97,8 +97,9 @@ form h2 {
 }
 
 label {
-    font-size: 32px;
+    font-size: 26px;
     margin-right: 20px;
+    color: #333;
 }
 
 input {
