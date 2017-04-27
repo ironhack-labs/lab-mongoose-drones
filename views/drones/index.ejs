@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+<h1>Here are all the drones</h1>
+<!--<pre><%= JSON.stringify(drones, null, 2) %></pre>-->
+
+<div class="row">
+  <div class="col-xs-4"><strong>Drone Name</strong></div>
+  <div class="col-xs-4"><strong>Propellers</strong></div>
+  <div class="col-xs-4"><strong>Max Speed</strong></div>
+</div>
+<% drones.forEach(drone => { %>
+<div class="row">
+  <div class="col-xs-4"><%= drone.droneName %></div>
+  <div class="col-xs-4"><%= drone.propellers %></div>
+  <div class="col-xs-4"><%= drone.maxSpeed %></div>
+</div>
+<% }) %>
+
+<% include ../partials/footer %>

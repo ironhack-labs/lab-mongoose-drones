@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+<h1>Add a new Drone</h1>
+
+
+<form action="/drones" method="POST">
+  <div class="form-group">
+    <label for="droneName">Drone Name</label>
+    <input type="text" class="form-control" id="droneName" name="droneName">
+  </div>
+  <div class="form-group">
+    <label for="propellers">Propellers</label>
+    <input type="number" class="form-control" id="propellers" name="propellers">
+  </div>
+  <div class="form-group">
+    <label for="maxSpeed">Max Speed</label>
+    <input type="number" class="form-control" id="maxSpeed" name="maxSpeed">
+  </div>
+  <button type="submit" class="btn btn-default">Save Drone</button>
+</form>
+
+
+
+<% include ../partials/footer %>
