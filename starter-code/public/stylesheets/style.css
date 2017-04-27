@@ -26,7 +26,7 @@ a {
 }
 
 .homepage h1, h3 {
-    color: #ff9cae;
+    color: #333;
     font-weight: bolder;
     text-align: center;
 }
@@ -108,7 +108,7 @@ input {
 }
 button {
     padding: 12px 20px 15px 20px;
-    color: #ff9cae;
+    color: #333;
     background-color: white;
     border: none;
     text-transform: uppercase;
