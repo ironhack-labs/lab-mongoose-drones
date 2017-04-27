@@ -38,4 +38,31 @@ router.get('/:id', (req, res, next) =>{
   })
 })
 
+//Edit Get
+router.get('/:id/edit', (req, res, next) =>{
+  Drone.findById(req.params.id, (err, drone) => {
+    if (err) { return next(err) }
+    res.render("drones/new", {drone: drone})
+  })
+})
+
+//Delete Get
+router.get('/:id/delete', (req, res)=>{
+  const droneId = req.params.id;
+  Drone.findByIdAndRemove(droneId,(err, drone) => {
+    res.redirect('/drones');
+  })
+});
+
+//Edit post
+router.post('/:id', (req,res) =>{
+  const droneId = req.params.id;
+  const updates = {
+    droneName: req.body.droneName,
+    propellers: req.body.propellers,
+    maxSpeed: req.body.maxSpeed
+  }
+})
+
+
 module.exports = router;

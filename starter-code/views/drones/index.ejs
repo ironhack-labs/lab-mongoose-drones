@@ -5,5 +5,8 @@
   <p>El dron tiene hélices nª <%=drone.propellers %></p>
   <p>Velocidad máxima<%= drone.maxSpeed %></p><br>
   <a href="/drones/<%= drone._id %>"> ver drone</a>
+  <a href="/drones/<%= drone._id %>/edit"> editar</a>
+  <a href="/drones/<%= drone._id %>/delete"> eliminar</a>
       <br>
 <% }) %>
+<a href="/drones/new"> añadir</a>
