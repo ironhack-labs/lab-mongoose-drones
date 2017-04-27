@@ -1,3 +1,6 @@
+/*jshint esversion: 6*/
+
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -11,7 +14,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 const drones = require('./routes/drones');
 
-mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect('mongodb://localhost/drones');
 
 var app = express();
 
@@ -32,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/', drones);
+app.use('/drones', drones);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
