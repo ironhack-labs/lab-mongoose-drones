@@ -32,12 +32,10 @@ router.post('/', (req, res, next) => {
 });
 
 router.get('/:id', (req, res, next) =>{
-console.log("detalle de dron: " + req.params.id)
-Drone.findById(req.params.id, (err, drone) => {
-  if (err) { return next(err) }
-    console.log(drone)
+  Drone.findById(req.params.id, (err, drone) => {
+    if (err) { return next(err) }
     res.render("drones/show", {drone: drone})
-})
+  })
 })
 
 module.exports = router;
