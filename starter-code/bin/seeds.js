@@ -1,7 +1,7 @@
 // Iteration #1
 const mongoose    = require('mongoose');
 
-mongoose.connect('mongodb://localhost/lab-mongoose-drones');
+mongoose.connect('mongodb://localhost/drones-dev');
 
 const Drone       = require('../models/drone-model.js');
 

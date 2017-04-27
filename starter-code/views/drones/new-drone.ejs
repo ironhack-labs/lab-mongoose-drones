@@ -1,21 +1,14 @@
-<h2> Add a Drone </h2>
+<h2> Add a new Drone </h2>
 
 <form method="post" action="/drones/new">
-  <!-- when you see two routes together you kind of know that the get submits to the post -->
-  <!-- whatever you name the get you name the post -->
-  <!-- you shouldnt choose the page you page you want the user to ultimately end up in -->
-  <!-- eventually we will have to have a route that says product.post -->
-  <!-- we should have an input for every key value pair in the schema folder -->
-  <!-- every input should have a label -->
-  <label for="drone-name-input">Drone Name</label>
+
+  <label for="drone-name-input">Drone Name : </label>
     <input id="drone-name-input" type="text" name="droneName">
-    <!-- for/id > these two names MUST match -->
-    <!--                                         ^ most important part is the name -->
     <br>
-  <label for="drone-propellar-input"> Propellar</label>
-    <input id="drone-propellar-input" type="number" name="propellar">
+  <label for="drone-propellar-input"> Propellars :</label>
+    <input id="drone-propellar-input" type="number" name="propellars">
     <br>
-  <label for="drone-maxSpeed-input"> Max Speed </label>
+  <label for="drone-maxSpeed-input"> Max Speed :</label>
     <input id="drone-maxSpeed-input" type="number" name="maxSpeed">
     <br>
   <button>  Add Drone </button>

@@ -17,9 +17,10 @@ router.get('/drones', (req, res, next) => {
 
 router.post('/drones/new', (req, res, next)=>{
     const theDrone= new Drone({
-      name: req.body.droneName,
-      propellar: req.body.propellar,
-      maxSpeed:req.body.maxSpeed
+      droneName: req.body.droneName,
+      propellars: req.body.propellars,
+      maxSpeed: req.body.maxSpeed
+
     });
 
     theDrone.save((err)=>{
