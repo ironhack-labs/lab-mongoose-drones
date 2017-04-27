@@ -7,8 +7,7 @@ const dronesModel = require('../models/drone.js');
 app.use('/', dronesModel);
 
 
-
-router.get('/', (req, res, next) => {
+router.get('/drones', (req, res, next) => {
   dronesModel.find((err, droneList) => {
     if(err){
       next(err);
@@ -23,13 +22,23 @@ router.get('/', (req, res, next) => {
 
 
 router.get('/drones/new', (req, res, next) => {
-  // Iteration #3
+    res.render('drones/new-drone.ejs');
 });
 
 router.post('/drones', (req, res, next) => {
-  // Iteration #3
+  const newDrone = new dronesModel({
+    droneName: req.body.droneName,
+    propellers: req.body.propellers,
+    maxSpeed: req.body.maxSpeed
+  });
+  newDrone.save((err) => {
+    if(err){
+      next(err);
+      return;
+    }
+    res.redirect('/drones');
+  });
 });
-
 
 
 app.use((err, req, res, next) => {

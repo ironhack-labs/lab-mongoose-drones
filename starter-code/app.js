@@ -35,7 +35,7 @@ const drones = require('./routes/drones');
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/drones', drones);
+app.use('/', drones);
 
 // END ROUTES
 
