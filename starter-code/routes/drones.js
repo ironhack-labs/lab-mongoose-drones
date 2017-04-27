@@ -17,7 +17,7 @@ router.get('/drones', (req, res, next) => {
 
   //if there isn't an error, woooopty dooo, render the page that the user
   //wanted to 'get'
-  res.render('/drones/drone-index.ejs',
+  res.render('./drones/drone-index.ejs',
   //this is the array that is going to be pass the results of
     //the find query above into the drone-index view
   { theDrones: allDronesList });
@@ -28,10 +28,30 @@ router.get('/drones', (req, res, next) => {
 
 router.get('/drones/new', (req, res, next) => {
   // Iteration #3
+  res.render('./drones/new-drone.ejs');
 });
 
-router.post('/drones', (req, res, next) => {
+router.post('/drones/new', (req, res, next) => {
   // Iteration #3
+  const theDrone = new Drone({
+    //this value comes from the input form that is being posted...to the body
+    //make sure that the key names match the key names of the DB
+    droneName:         `${req.body.droneBrand} ${req.body.droneModel}`,
+    dronePrice:        req.body.dronePrice,
+    droneImg:          req.body.droneUrl,
+    propellers:        req.body.droneProp,
+    maxSpeed:          req.body.droneSpeed,
+    droneDesc:         req.body.droneDescription
+  });
+  //save the new value to the db, unless there is an error... NEXT
+  theDrone.save((err) => {
+    if (err) {
+      next(err);
+      return;
+    }
+              //localhost:3000/drones
+    res.redirect('/drones');
+  });
 });
 
 module.exports = router;

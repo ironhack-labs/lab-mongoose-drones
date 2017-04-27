@@ -9,10 +9,12 @@
       <p class="nome"><%= item.droneName %></p>
       <div class="details">
         <span>$<%= item.dronePrice %>.00</span>
-        <span>Amt of Prop:<%= item.propellers %></span>
-        <span>Max Speed<%= item.maxSpeed %>MPH</span>
+        <br>
+        <span>Amt of Prop: <%= item.propellers %></span>
+        <br>
+        <span>Max Speed: <%= item.maxSpeed %>MPH</span>
         <div class ="detailDesc">
-          <p>Description:</p>
+          <p>Description: </p>
           <span><%= item.droneDesc %></span>
         </div>
     </li>
@@ -20,5 +22,5 @@
   </ul>
 
   <div class="btn">
-    <a href ="/drone/new">Add Another Drone</a>
+    <a href ="/drones/new">Add Another Drone</a>
 </div>

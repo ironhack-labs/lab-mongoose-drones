@@ -1,0 +1,36 @@
+<h2> Add a New Drone to the Drone Zone </h2>
+
+<div class="divider"></div>
+
+<section = "content">
+  <form method="post" action="/drones/new">
+    <label for="drone-brand-input">Drone Brand </label>
+    <input id="drone-brand-input" type="text" name="droneBrand">
+    <br>
+    <label for="drone-model-input">Drone Model </label>
+    <input id="drone-model-input" type="text" name="droneModel">
+    <br>
+
+    <label for="drone-price-input"> Price </label>
+    <input id="drone-price-input" type="number" name="dronePrice">
+    <br>
+
+    <label for ="drone-image-url-input"> Hosted Image Url </label>
+    <input id="drone-image-url-input" type="url" name="droneUrl">
+    <br>
+
+    <label for="drone-prop-input">Propellers </label>
+    <input id="drone-prop-input" type="number" name="droneProp">
+    <br>
+
+    <label for="drone-speed-input">Speed </label>
+    <input id="drone-speed-input" type="number" name="droneSpeed">
+    <br>
+
+    <label for="drone-description-input"> Description </label>
+    <textarea id="drone-description-input" name="droneDescription"></textarea>
+
+    <button class="newDrone">CREATE DRONE</button>
+  </form>
+<div class="divider"></div>
+</section>
