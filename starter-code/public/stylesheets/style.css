@@ -1,8 +1,43 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("../images/droneShot.jpg");
+  max-width: 100%;
+  height: 100%;
+  padding: 50px font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  font-size: 25px;
+  color: white;
 }
 
 a {
   color: #00B7FF;
+  font-size: 35px;
+}
+
+a:hover {
+  cursor: pointer;
+  background: #f9ecf2;
+}
+
+.name {
+  color: #55c65b;
+}
+
+.speed {
+  color: #78a2db;
+}
+.form{
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding-top: 80px;
+  font-size: 20px;
+  color: #82dd8d;
 }

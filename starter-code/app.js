@@ -7,10 +7,6 @@ var bodyParser = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-const drones = require('./routes/drones');
-
 mongoose.connect('mongodb://localhost/drones-dev');
 
 var app = express();
@@ -23,20 +19,32 @@ app.use(expressLayouts);
 app.locals.title = 'Drnz';
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+///////////////  ROUTES FROM HERE ///////////////////////
+/////////--------------------------------------------///////////
+var index = require('./routes/index');
+console.log('HOMEPAGE');
 app.use('/', index);
+
+var users = require('./routes/users');
+console.log('blah');
 app.use('/users', users);
+
+const drones = require('./routes/drones');
+console.log('Drone');
 app.use('/', drones);
+/////////////////------------------------------/////////////
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error('YO, SOMETHING ISNT RIGHT!');
   err.status = 404;
   next(err);
 });
