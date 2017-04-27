@@ -1,8 +1,91 @@
-body {
+/*body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}*/
+
+
+body {
+  background-color: white;  //obvious choice
+  color: white;
+}
+
+.main-title{
+  padding: 90px;
+}
+
+.aerial {
+  background-image: url("https://media.giphy.com/media/Xny5DgDlX0jss/giphy.gif");
+  background-size:100%;
+  display: block;
+  text-align: center;
+}
+
+
+.background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#arctic{
+  width: 45%;
+  float: left;
+  padding: 30px;
+}
+#spiral{
+  width: 30%;
+  float: left;
+ padding: 30px;
+ left: 100px;
+}
+
+h1,p,h2 {
+    display: block;
+    text-align: left;
+  }
+
+button {
+    /*display: block;*/
+    margin: 10px auto;
+    border: 4px solid crimson;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 14px;
+    text-align: left;
+    background: none;
+    color: crimson;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+  background: crimson;
+  color: white;
+}
+button:hover a {
+  color: crimson;
+  font-weight: bold;
+}
+button a {
+  text-decoration: none;
+  color: crimson;
+  font-weight: bold;
+}
+
+
+.vox-cardstack {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.vox-cardstack {
+  display: block;
 }

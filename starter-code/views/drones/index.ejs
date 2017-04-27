@@ -1,0 +1,9 @@
+<h2>Existing Drones</h2>
+<ul>
+<% drones.forEach((oneDrone)=>{ %>
+  <li>
+      <%=oneDrone.droneName%>
+  </li>
+<% }) %>
+</ul>
+<a href='/drones/new'><button>Add a drone</button></a>
