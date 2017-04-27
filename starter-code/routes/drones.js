@@ -47,4 +47,25 @@ router.post('/drones', (req, res, next) => {
   res.redirect('/drones');
 });
 
+router.get ('/drones/:id', (req, res, next) =>{
+  Drone.findById(req.params.id, (err, dron) =>{
+    if(err) {console.log(err);}
+    else{
+      res.render ('drones/dron', dron);
+    }
+  });
+});
+
+router.post('/drones/:id/edit', (req, res, next)=>{
+  let updated_dron = {
+    droneName: req.body.droneName,
+    propellers: req.body.propellers,
+    maxSpeed: req.body.maxSpeed
+  };
+  Drone.findByIdAndUpdate(req.params.id, { $set: updated_dron}, (err) => {
+    res.redirect('/drones');
+  });
+});
+
+
 module.exports = router;
