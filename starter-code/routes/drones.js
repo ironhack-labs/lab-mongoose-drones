@@ -27,6 +27,7 @@ router.post('/drones/new', (req, res, next) => {
         droneName: req.body.droneName,
         propellers: req.body.propellers,
         maxSpeed: req.body.maxSpeed,
+        droneImg: req.body.droneImg
     });
     newDrone.save((err) => {
         if (err) {
