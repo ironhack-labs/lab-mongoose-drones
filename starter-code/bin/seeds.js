@@ -28,12 +28,16 @@ const drones = [
 
 
   // db.products.insertMany()
+  //////////
+  //////////||
 Drone.create(drones, (err, droneDoc) => {
   if (err) {
+    ///You can't throw the err in App.js because seeds runs in the terminal.
     throw err;
   }
 
   droneDoc.forEach((oneDrone) => {
+    ///this gives you feedback if it works
     console.log(`NEW PRODUCT ${oneDrone.droneName} -> ${oneDrone._id}`);
   });
 
