@@ -1,18 +1,36 @@
 <h2>Add a new drone</h2>
-<form method='post' action='/drones/new'>
-  <div>
-    <label for='droneName'> Drone Name: </label>
-    <input type='text' name='droneName' id='droneName'>
-  </div>
-  <div>
-    <label for='propellers'> Propellers: </label>
-    <input type='number' name='propellers' id='propellers'>
-  </div>
-  <div>
-    <label for='maxSpeed'> Maximum Speed: </label>
-    <input type='number' name='maxSpeed' id='maxSpeed'>
-  </div>
+<div id="form-main">
+  <div id="form-div">
+    <form method='post' action='/drones/new' class="form" id="form1">
+      <div>
+        <!-- <label for='droneName'> Drone Name: </label> -->
+        <p class="name">
+          <input name="droneName" type="text" class="feedback-input" placeholder="Drone Name" id="droneName" />
+        </p>
+      </div>
+      <div>
+        <!-- <label for='propellers'> Propellers: </label> -->
+        <!-- <input type='number' name='propellers' id='propellers'> -->
+        <p class="name">
+          <input name="propellers" type="number" class="feedback-input" placeholder="Propellers" id="propellers" />
+        </p>
+      </div>
+      <div>
+        <!-- <label for='maxSpeed'> Maximum Speed: </label>
+        <input type='number' name='maxSpeed' id='maxSpeed'> -->
+        <p class="name">
+          <input name="maxSpeed" type="number" class="feedback-input" placeholder="Maximum Speed [mph]" id="maxSpeed" />
+        </p>
+      </div>
 
-  <button> Add this drone</button>
-</form>
-<a href='/drones'> <button> Back to catalog</button> </a>
+      <button> Add this drone</button>
+    </form>
+    <a href='/drones'> <button> Back to catalog</button> </a>
+  </div>
+</div>
+
+<!--
+
+<p class="name">
+  <input name="droneName" type="text" class="feedback-input" placeholder="Name" id="droneName" />
+</p> -->
