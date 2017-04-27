@@ -31,7 +31,7 @@ const drones = [
     droneDesc:  `A sleek new design with magnesium unibody construction obstacle avoidance
                 sensor dynamic range enhancing video modes and a two-point-of-contact gimbal mount are
                 just some the features DJI have introduced with the Phantom 4 Quadcopter.`,
-    droneImg:   "http://www.unmannedsystemstechnology.com/wp-content/uploads/2017/02/DJI-drone.jpg"
+    droneImg:   "https://www1.djicdn.com/uploads/nav_link/cover/4/size_1000_540_bcb57ae20a1e1d7625997d25995fc164.png"
  },
  {
    droneName:  "DJI Mavic Pro Drone",
