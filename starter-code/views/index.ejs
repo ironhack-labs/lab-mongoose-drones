@@ -1,1 +1,14 @@
 <p>Welcome to <%= title %></p>
+
+<ul>
+  <% drones.forEach((aDrone) => { %>
+   <li>  <%= aDrone.droneName %>
+
+     <a href="drones/edit/<%= aDrone._id %>">Edit</a>
+
+   </li>
+  <% }) %>
+</ul>
+
+
+<a href="/drones/new">Add new drone</a>
