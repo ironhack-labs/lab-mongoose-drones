@@ -4,16 +4,23 @@ body {
   background-size: 100%;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: black;
 }
 
 h1{
   font-size: 50px;
+  font-weight: bold;
+}
+
+h2{
+  font-weight: bold;
 }
 
 a {
   padding-right: 30px;
   font-size: 20px;
-  color: blue;
+  font-weight: bold;
+  color: black;
 }
 
 a:link {

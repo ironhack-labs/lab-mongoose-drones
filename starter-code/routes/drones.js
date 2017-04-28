@@ -38,4 +38,58 @@ router.post('/drones/new', (req, res, next) => {
   });
 });
 
+router.get('/drones/:id', (req, res, next) => {
+
+  const droneId = req.params.id;
+  console.log(droneId);
+
+  Drone.findById( droneId, (err, theDrone) =>{
+    if(err){
+      next(err);
+      return;
+    }
+    if (!theDrone) {
+      next();
+      return;
+    }
+    res.render('drones/details.ejs', {
+      drone: theDrone
+    });
+  });
+});
+
+router.get('/drones/:id/edit', (req, res, next) => {
+  const droneId = req.params.id;
+
+  Drone.findById( droneId, (err, theDrone) => {
+    if (err) {
+      next(err);
+      return;
+    }
+    res.render('drones/edit.ejs', {
+      drone: theDrone
+    });
+  });
+});
+
+router.post('/drones/:id', (req, res, next) => {
+  const droneId = req.params.id;
+
+  const droneChanges = {
+    droneName: req.body.droneName,
+    propellers: req.body.propellers,
+    maxSpeed: req.body.maxSpeed
+  };
+  Drone.findByIdAndUpdate(
+    droneId,
+    droneChanges,
+    (err, theDrone) => {
+      if(err) {
+        next(err);
+        return;
+      }
+      res.redirect('/drones');
+    });
+});
+
 module.exports = router;
