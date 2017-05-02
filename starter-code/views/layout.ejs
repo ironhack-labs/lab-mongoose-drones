@@ -4,24 +4,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
 
-  <body>
-
-    <header>
-      <nav>
-        <ul>
-          <li><a href ="/">Home</a></li>
+  <body id="myPage"data-spy="scroll" data-target=".navbar" data-offset="60" onload="myFunction()">
+  <div class="header">
+    <div class="bg-color">
+    <header id="main-header">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#lauraMenu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">Drones</a>
+  </div>
+  <div class="collapse navbar-collapse" id="lauraMenu">
+    <ul class="nav navbar-nav navbar-right navbar-border">
+          <!-- <li><a href ="/">Home</a></li> -->
           <li><a href ="/drones">Drones</a></li>
         </ul>
       </nav>
     </header>
-
-    <section class="mainTitle">
-      <h1><%= title %></h1>
-    </section>
-
+    <div class="wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 wow fadeIn delay-05s">
+              <div class="banner-text">
+                <h2><%= title %> </h2>
+                <p>For businesses<br>& consumers</p>
+              </div>
+              <div class="overlay-detail text-center">
+                  <a href="#about"><i class="fa fa-angle-down"></i></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <section id="about" class="section-padding wow fadeIn delay-05s">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 text-right">
+                <h2 class="title-text">
+                  Meet<br><span class="deco">Laura</span> Thomson
+                </h2>
+              </div>
     <section class="content">
       <%- body %>
     </section>
