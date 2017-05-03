@@ -25,6 +25,10 @@ build/Release
 # Dependency directory
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
 node_modules
+.vscode
 
 # Debug log from npm
 npm-debug.log
+
+# Mac directory
+.DS_Store
