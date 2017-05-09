@@ -41,11 +41,11 @@ Though their origins lie in military applications, they are used in business, ag
 
 Amazon is even trying to use them [to deliver packages](https://www.amazon.com/Amazon-Prime-Air/b?node=8037720011).
 
-![Amazon Prime Air drone](images/prime-drone.jpg)
+![Amazon Prime Air drone](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_926e75d45f2a997152f4401844b3b4d5.jpg)
 
 Hopefully you won't have one of these after you:
 
-![General Atomics MQ-9 Reaper, a military drone.](images/reaper.jpg)
+![General Atomics MQ-9 Reaper, a military drone](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_e7d709d82f92c8a20fab10dc14f10100.jpg)
 
 Let's create an app for the drone enthusiast using Express and Mongoose! Maybe the drones will spare us when they take over everything.
 
@@ -120,8 +120,7 @@ app.use('/', drones);
 
 Now that we know what we are starting with, let's get to coding!
 
-![Let's go](images/lets-go.gif)
-
+![Let's go](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_2eaf366a0cf7aa9c4e2590e616469388.gif)
 
 ## Iteration #1: `Drone` model
 
@@ -202,7 +201,7 @@ For **Step 2**, this will be the first time you use the `Drone` model in a route
 
 For **Step 4**, you'll need a `forEach` loop like this one (assuming your array of drones is named `drones`):
 
-```htmlmixed
+```ejs
 <ul>
   <% drones.forEach((aDrone) => { %>
     <!-- display info from aDrone -->
@@ -247,11 +246,11 @@ Here are the routes we will be using:
 
 For **Step 4**, your form will look something like this:
 
-```htmlmixed
+```ejs
 <form method="post" action="/drones">
   <div>
-    <label for="droneName"> Model Name: </label>
-    <input type="text" name="droneName" id="droneName">
+    <label for="drone-name"> Model Name: </label>
+    <input type="text" name="droneName" id="drone-name">
   </div>
 
   <div>
@@ -260,8 +259,8 @@ For **Step 4**, your form will look something like this:
   </div>
 
   <div>
-    <label for="maxSpeed"> Maximum Speed (meters per second): </label>
-    <input type="number" name="maxSpeed" id="maxSpeed">
+    <label for="max-speed"> Maximum Speed (meters per second): </label>
+    <input type="number" name="maxSpeed" id="max-speed">
   </div>
 
   <button> Add this drone </button>
