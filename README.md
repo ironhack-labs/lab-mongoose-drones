@@ -201,7 +201,7 @@ For **Step 2**, this will be the first time you use the `Drone` model in a route
 
 For **Step 4**, you'll need a `forEach` loop like this one (assuming your array of drones is named `drones`):
 
-```htmlmixed
+```ejs
 <ul>
   <% drones.forEach((aDrone) => { %>
     <!-- display info from aDrone -->
@@ -246,7 +246,7 @@ Here are the routes we will be using:
 
 For **Step 4**, your form will look something like this:
 
-```htmlmixed
+```ejs
 <form method="post" action="/drones">
   <div>
     <label for="drone-name"> Model Name: </label>
