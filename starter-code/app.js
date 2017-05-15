@@ -1,3 +1,5 @@
+/* jshint esversion:6 */
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -11,6 +13,8 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 const drones = require('./routes/drones');
 
+var bootstrap = require("express-bootstrap-service");
+
 mongoose.connect('mongodb://localhost/drones-dev');
 
 var app = express();
@@ -21,6 +25,8 @@ app.set('view engine', 'ejs');
 
 app.use(expressLayouts);
 app.locals.title = 'Drnz';
+
+app.use(bootstrap.serve);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
