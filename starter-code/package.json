@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon ./bin/www",
+    "seed" : "node ./bin/seeds.js"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
