@@ -1,0 +1,26 @@
+<h2> The Drones found at the Drone Zone </h2>
+
+<ul>
+  <% theDrones.forEach((item) => { %>
+    <li>
+      <div class="prodImg">
+        <img src="<%= item.droneImg %>">
+      </div>
+      <p class="nome"><%= item.droneName %></p>
+      <div class="details">
+        <span>$<%= item.dronePrice %>.00</span>
+        <br>
+        <span>Amt of Prop: <%= item.propellers %></span>
+        <br>
+        <span>Max Speed: <%= item.maxSpeed %>MPH</span>
+        <div class ="detailDesc">
+          <p>Description: </p>
+          <span><%= item.droneDesc %></span>
+        </div>
+    </li>
+    <% }) %>
+  </ul>
+
+  <div class="btn">
+    <a href ="/drones/new">Add Another Drone</a>
+</div>

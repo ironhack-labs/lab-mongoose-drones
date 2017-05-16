@@ -274,3 +274,6 @@ Our app should be pretty ugly right now if you (correctly) focused on the back-e
 In your layout require bootstrap, and add some very basic styles to make our drones app look ready for production.
 
 /Happy coding!
+
+[v0.02 Import Seeds into DB](https://i.gyazo.com/60ba099cdb29024d468d28d0e1009f68.png)
+[v0.02 Checking DB](https://i.gyazo.com/dee52d0dc0f3510dad736223558b5064.png)
