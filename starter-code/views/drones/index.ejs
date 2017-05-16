@@ -1,0 +1,19 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h2><%= title %></h2>
+    <p>Welcome to <%= title %></p>
+    <ul>
+      <% drones.forEach((drone) => { %>
+          <%= drone.droneName %>
+           <!--display info from aDrone - $<%= drone.droneName %>-->
+      <% }) %>
+    </ul>
+  </body>
+</html>
