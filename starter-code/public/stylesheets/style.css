@@ -1,8 +1,40 @@
 body {
+  background-image: url('../images/drone-background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: black;
+}
+
+h1{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+h2{
+  font-weight: bold;
 }
 
 a {
-  color: #00B7FF;
+  padding-right: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+a:link {
+  padding: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 45px;
+  font-size: 30px;
+}
+
+div.scroll {
+  padding-top: 20px;
+  height: 270px;
+  overflow: scroll;
 }
