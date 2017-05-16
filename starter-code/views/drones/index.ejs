@@ -1,0 +1,16 @@
+<h2>
+  Drone List
+</h2>
+
+<div class="mainVp">
+
+<% dl.forEach((oneDrone) => { %>
+  <ul>
+    <li>Name: <%= oneDrone.droneName %>  | Propellers: <%= oneDrone.propellers %> |Max Speed: <%= oneDrone.maxSpeed %> miles/hour</li>
+    <br>
+  </ul>
+<% }) %>
+
+</div>
+
+<a href="/drones/new">Add new</a>

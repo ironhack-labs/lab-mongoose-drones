@@ -7,9 +7,6 @@ var bodyParser = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-const drones = require('./routes/drones');
 
 mongoose.connect('mongodb://localhost/drones-dev');
 
@@ -30,9 +27,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+//ROUTES:
+var index = require('./routes/index');
+var users = require('./routes/users');
+const drones = require('./routes/drones');
+
 app.use('/', index);
 app.use('/users', users);
 app.use('/', drones);
+
+// END ROUTES
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
