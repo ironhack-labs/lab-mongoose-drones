@@ -1,0 +1,24 @@
+<h1>Drone List</h1>
+
+<div class="box">
+// | we use the tenical because we want to display it on the HTML
+  <% drones.forEach((oneDrone)=>{ %>
+    <div>
+      <p class="name">Name:
+        <%= oneDrone.droneName %></p>
+      <p class="num">Number of propellers:
+        <%= oneDrone.propellers %>
+      </p>
+      <p class="speed"> Max speed:
+        <%= oneDrone.maxSpeed %>
+      </p>
+    </div>
+
+    <% })%>
+
+</div>
+<br>
+
+<a href="/drones/new">
+  Add new drone
+ </a>
