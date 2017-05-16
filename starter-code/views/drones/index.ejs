@@ -1,0 +1,30 @@
+
+<h2>Drone List</h2>
+<div>
+<h3>  
+  <a href="/drones/new">Add a new drone</a>
+  </h3>
+</div>
+<% dronesList.forEach((oneDrone) => { %>
+ <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><i class="fa fa-fw fa-check"></i> <%= oneDrone.droneName%></h4>
+          </div>
+          <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src='<%= oneDrone.imageUrl %>'alt="">
+                </a>
+                  <div class="panel-body">
+                      <p>Propellers <%= oneDrone.propellers %></p>
+                      <p>MaxSpeed <%= oneDrone.maxSpeed %></p>
+                      <p>description <%= oneDrone.description %></p>
+
+                    <a href="#" class="btn btn-default">Learn More</a>
+                  </div>
+          </div>
+        </div>
+</div>
+  <% }) %>
+
+
