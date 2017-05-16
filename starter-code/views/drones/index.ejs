@@ -1,0 +1,16 @@
+<h2> Russian military drones </h2>
+
+
+<ul>
+  <% drones.forEach((oneDrone) => { %>
+    <li>
+      <p class='boxes'>Name: <%= oneDrone.droneName %></p>
+      <p>Number of propellers: <%= oneDrone.propellers %></p>
+      <p>Max speed(m/s): <%= oneDrone.maxSpeed %></p>
+      <img class='pics' src="<%= oneDrone.imageUrl %>"
+    </li>
+  <% }) %>
+</ul>
+
+<a href="drones/new"> Add a drone</a>
+<a href='/'>Home</a>
