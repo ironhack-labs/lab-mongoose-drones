@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+#navcontainer ul { margin: 0; padding: 0; list-style-type: none; }
+#navcontainer ul li { display: inline; padding: 10px; }
+#navcontainer ul li a { text-decoration: none; text-transform: uppercase; }
+
+.panel-footer{
+  text-align: center;
+}

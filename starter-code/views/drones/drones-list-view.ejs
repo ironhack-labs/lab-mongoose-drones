@@ -1,0 +1,18 @@
+
+<h1>List of Drones</h1>
+    <div class="panel panel-default">
+    <div class="panel-body">
+      <ul>
+        <% drones.forEach((oneDrone) => { %>
+            <li>
+                <%= oneDrone.droneName %> | <%= oneDrone.propellers %> | <%= oneDrone.maxSpeed %>
+            </li>
+        <% }) %>
+      </ul> 
+      <!-- this div is for adding a table on runtime -->
+      <div id="dvTable">
+      </div>
+      <!-- end here -->   
+    </div>
+    <div class="panel-footer"><a href="/drones/new"> Add New Drone </a></div>
+  </div>  

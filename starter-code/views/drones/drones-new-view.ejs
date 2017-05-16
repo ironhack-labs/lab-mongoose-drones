@@ -1,0 +1,19 @@
+<div class="container">
+  <h2> Add a New Drone </h2>
+  <form method="post" action="/drones">
+    <div class="form-group">
+      <label for="drone-name-input"> Drone Name: </label>
+      <input type="text"  class="form-control" id="drone-name-input" placeholder="Enter Drone Name" name="droneName">
+    </div>
+    <div class="form-group">
+      <label for="drone-propellers-input"> Number of Propellers: </label>
+      <input type="number"  class="form-control" id="drone-propellers-input" placeholder="Enter Number of Propellers" name="propellers">
+    </div>
+    <div class="form-group">
+      <label for="drone-speed-input"> Max Speed (meters per second) </label>
+      <input type="number"  class="form-control" id="drone-speed-input" placeholder="Enter Drone Speed" name="maxSpeed">
+    </div>
+    
+    <button type="submit" class="btn btn-default">Add New Drone</button>
+  </form>
+</div>
