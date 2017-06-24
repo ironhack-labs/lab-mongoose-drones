@@ -1,0 +1,20 @@
+<h2> Our flying flote </h2>
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Propellers </th>
+    <th> maxSpeed </th>
+    <th> </th>
+    <th> </th>
+  </tr>
+  <% drones.forEach((drone) => { %>
+  <tr>
+    <td> <%= drone.droneName %> </td>
+    <td> <%= drone.propellers %> </td>
+    <td> <%= drone.maxSpeed %> </td>
+    <td> <button> <a href="/drones/<%= drone._id %>/edit">Edit</a> </td>
+    <td> <button> <a href="/drones/<%= drone._id %>/delete">Delete</a> </td>
+  </tr>
+  <% }) %>
+</table>
