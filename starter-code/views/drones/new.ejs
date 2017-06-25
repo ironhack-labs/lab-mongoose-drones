@@ -2,7 +2,7 @@
 
 <form action="/drones" method="POST">
   <label for="drone-name">Name</label>
-  <input type="text" id="drone-name" name="droneName">
+  <input type="text" id="droneName" name="droneName">
 
  <label for="propellers">Propellers</label>
   <input type="number" name="propellers" id="propellers">
@@ -10,5 +10,20 @@
  <label for="max-speed">maxSpeed</label>
   <input type="number" name="maxSpeed" id="max-speed">
 
- <button type="submit">Create Your Drone</button>
+ <button type="submit" class="btn btn-default">Create Your Drone</button>
 </form>
+<button class="btn btn-default"> <a href="/">Home</a> </button>
+
+
+<% if (typeof(errors) !== "undefined"){ %>
+  <% for (let error in errors){ %>
+    <li class='error'><%= errors[error].message %></li>
+  <% } %>
+  <script>
+    toastr.error('<%= err %>')
+  </script>
+  <script>
+    console.log(<%=Object.keys(errors)%>);
+    document.getElementById('<%= Object.keys(errors) %>').classList.add('box-error')
+  </script>
+<% } %>

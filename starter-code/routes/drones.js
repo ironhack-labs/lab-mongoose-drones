@@ -15,24 +15,37 @@ router.get('/drones', (req, res, next) => {
 });
 
 router.get('/drones/new', (req, res, next) => {
-  res.render('drones/new');
+  res.render('drones/new', {hasErrors: false});
 });
 
 router.post('/drones', (req, res, next) => {
   const droneInfo = {
       droneName: req.body.droneName,
-      propellers: req.body.propellers,
-      maxSpeed: req.body.maxSpeed,
+      propellers: req.body.propellers.length === 0 ? undefined : req.body.propellers,
+      maxSpeed: req.body.maxSpeed.length === 0 ? undefined : req.body.maxSpeed
   };
 
  // Create a new Drone with the params
   const newDrone = new Drone(droneInfo);
   newDrone.save( (err) => {
-    if (err) { return next(err) }
-    // redirect to the list of products if it saves
-    return res.redirect('/drones');
+    if (err) {
+      res.render('drones/new', {hasErrors: true, err: err, errors: newDrone.errors})
+    } else {
+      // redirect to the list of products if it saves
+      return res.redirect('/drones');
+    }
   });
 });
+// Show a Drone
+router.get('/drones/:id', (req, res, next) => {
+  const droneId = req.params.id;
+
+ Drone.findById(droneId, (err, drone) => {
+    if (err) { return next(err); }
+    res.render('drones/show', { drone: drone });
+  });
+});
+
 // Edit a Drone
 router.get('/drones/:id/edit', (req, res, next) => {
   const droneId = req.params.id;

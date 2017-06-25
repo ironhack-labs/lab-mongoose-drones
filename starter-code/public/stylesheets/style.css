@@ -1,8 +1,23 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: black;
 }
 
-a {
-  color: #00B7FF;
+li {
+  list-style: none;
+  margin-top: 5px;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 15px;
+}
+.error{
+  color: red;
+}
+.class-error {
+  border-color: red;
+}
+a{
+  color: black;
 }
