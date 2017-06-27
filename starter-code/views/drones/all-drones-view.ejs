@@ -1,0 +1,15 @@
+<h2>All your drones!</h2>
+
+<ul>
+  <% dronesList.forEach((oneDrone)=>{ %>
+    <li>
+      <h3><%= oneDrone.droneName %></h3>
+      <p>Number of propellers: <%= oneDrone.propellers %> </p>
+      <p>Max speed: <%= oneDrone.maxSpeed %> </p>
+      <a href="/drones/<%=oneDrone._id%>/edit">Edit this Drone</a>
+      <form action="/drones/<%=oneDrone._id%>/remove" method="post">
+        <button>Delete this Drone</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
