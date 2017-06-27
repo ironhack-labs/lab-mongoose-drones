@@ -1,0 +1,11 @@
+<h2> Drones List </h2>
+
+<ul>
+  <% dronesObject.forEach((drone) => { %>
+    <li>
+      <h3> <%= drone.droneName %> </h3>
+      <p> <%= drone.propellers %> </p>
+      <p> <%= drone.maxSpeed %> </p>
+    </li>
+  <% }) %>
+</ul>
