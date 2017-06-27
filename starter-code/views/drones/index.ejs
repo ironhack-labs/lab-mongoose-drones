@@ -1,0 +1,13 @@
+<p>Welcome to <%= title %></p>
+<h2> List of Drones </h2>
+<ul>
+<%  dronesList.forEach((oneDrone)=>{ %>
+    <li>
+      <h3> <%= oneDrone.droneName %> </h3>
+      <p> Number of Propellers: <%= oneDrone.propellers %> </p>
+      <p> Max Speed: <%= oneDrone.maxSpeed %>mph </p>
+
+
+    </li>
+<%  }); %>
+</ul>
