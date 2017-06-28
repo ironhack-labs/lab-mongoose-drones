@@ -1,0 +1,14 @@
+<div class="indexpage">
+<h2> Available Drones:</h2>
+
+<ul>
+  <% dronesAndStuff.forEach((aDrone) => { %>
+    <li>
+      <h3> Name: <%=aDrone.droneName%> </h3>
+      <p>  Propellers: <%=aDrone.propellers%></p>
+      <p>  MaxSpeed <%=aDrone.maxSpeed%></p>
+
+    </li>
+  <% }) %>
+</ul>
+</div>
