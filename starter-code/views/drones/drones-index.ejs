@@ -1,0 +1,16 @@
+<a href="/">Drnz Home</a>
+<a href="/drones">ALL the Drnz</a>
+<a href="/drones/new"> Add a Drnz</a>
+
+<h2>Super Awesome Drone Collection</h2>
+
+<ul>
+  <% droneBuild.forEach((oneDrone)=>{ %>
+    <li>
+        <h3> Name: <%= oneDrone.droneName %> </h3>
+        <p># of Propellers: <%= oneDrone.propellers %> </p>
+        <p> Max Speed: <%= oneDrone.maxSpeed %> </p>
+
+    </li>
+   <% }); %>
+</ul>
