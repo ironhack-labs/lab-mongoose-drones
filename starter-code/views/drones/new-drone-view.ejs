@@ -1,0 +1,33 @@
+<h2> Add a New Drone</h2>
+
+
+<form method="post" action="/drones">
+  <div class="form-group">
+    <label class="col-sm-2" for="drone-name-input">Name of Drone</label>
+    <div class="col-sm-10">
+      <input class="form-control" id="drone-name-input" type="text" name="droneName" />
+                                                                  <!-- req.body.productName -->
+    </div>
+    <br />
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2" for="propellers-input">Propellers</label>
+    <div class="col-sm-10">
+      <input class="form-control" id="propellers-input" type="number" name="propellers" />
+
+    </div>
+    <br/>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2" for="maxSpeed-input">Max Drone Speed</label>
+    <div class="col-sm-10">
+      <input class="form-control" id="maxSpeed-input" type="number" name="maxSpeed" />
+
+    </div>
+    <br/>
+  </div>
+
+  <button class="btn btn-primary">Add Drone n Shit</button>
+</form>
