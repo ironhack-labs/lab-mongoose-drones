@@ -1,0 +1,59 @@
+
+body {
+  background-image: url("https://iso.500px.com/wp-content/uploads/2016/09/stock-photo-160988895-1500x1000.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.homepage {
+  background-color: #a87078;
+  width: 600px;
+  height: 250px;
+  opacity: 0.8;
+  margin: 0 auto;
+}
+
+.homepage p{
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  color: #314438;
+}
+
+.homepage a {
+  margin-left: 180px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #314438;
+}
+
+.indexpage {
+  background-color: #a87078;
+  width: 800px;
+  height: 600px;
+  opacity: 0.8;
+  margin: 0 auto;
+  text-align: center;
+  color: #314438;
+}
+
+li {
+  list-style: none;
+}
+
+.newdronepage {
+  background-color: #a87078;
+  width: 600px;
+  height: 300px;
+  opacity: 0.8;
+  margin: 0 auto;
+  text-align: center;
+  color: #314438;
+  font-size: 24px;
+}
+
+.newdronepage button {
+  height: 50px;
+  width: 110px;
+}
