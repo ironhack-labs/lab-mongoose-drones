@@ -1,8 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: #cebada;
+  font: 28px "Ubuntu Condensed", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #0b0e00;
+}
+
+h2{
+  font-size: 22px;
+  text-transform: uppercase;
 }
