@@ -1,0 +1,7 @@
+<h2>Dron factory</h2>
+<a href="/">Back</a>
+<ul>
+<%drones.forEach((dr)=>{%>
+  <li>  <%= `${dr.dronName} - propellers: ${dr.propellers} - top speed: ${dr.maxSpeed}m/s` %></li>
+<%})%>
+</ul>
