@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <h2>Welcome to <%= title %></h2>
+    <div>
+      <form action="/drones" method="POST">
+        <label for="drone-name">Drone name</label>
+        <input type="text" name="droneName">
+
+        <label for="propellers">Propellers</label>
+        <input type="number" name="propellers">
+
+        <label for="max-speed">Max speed</label>
+        <input type="number" name="maxSpeed">
+
+        <button type="submit">Create new drone</button>
+      </form>
+    </div>
+
+  </body>
+</html>
