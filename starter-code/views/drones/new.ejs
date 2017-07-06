@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Drone</title>
+  </head>
+  <body>
+<h2>New Drone</h2>
+
+<div>
+  <form action="/drones" method="POST">
+    <label for="droneName">droneName</label>
+    <input type="text" id="droneName" name="droneName">
+
+    <label for="propellers">propellers</label>
+    <input type="number" name="propellers" id="propellers">
+
+    <label for="maxSpeed">maxSpeed</label>
+    <textarea type="number" name="maxSpeed" id="maxSpeed"></textarea>
+
+    <button type="submit">Create Drone</button>
+  </form>
+</div>
+  </body>
+</html>

@@ -26,10 +26,21 @@ console.log(d);
 
 router.get('/drones/new', (req, res, next) => {
   // Iteration #3
+  res.render("drones/new");
+
 });
 
 router.post('/drones', (req, res, next) => {
   // Iteration #3
+  console.log(req.body);
+let d = new Drone({
+  droneName: req.body.droneName,
+  propellers: req.body.propellers,
+  maxSpeed: req.body.maxSpeed
+});
+d.save((err, obj) => {
+  res.redirect('/drones');
+});
 });
 
 module.exports = router;
