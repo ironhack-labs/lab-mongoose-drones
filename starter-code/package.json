@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "start-dev": "nodemon app.js",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -15,5 +16,15 @@
     "mongoose": "^4.7.7",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "main": "app.js",
+  "bin": {
+    "solution-code": "seeds.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
