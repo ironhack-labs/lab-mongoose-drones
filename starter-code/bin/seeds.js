@@ -28,5 +28,5 @@ mongoose.connect('mongodb://localhost/drones-dev')
         console.log(`New drone created [${obj.droneName}] with ID:${obj._id}`);
       }
     }));
-    mongoose.connection.close();
+    // mongoose.connection.close();
   });
