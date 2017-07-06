@@ -1,0 +1,10 @@
+<h2>Hola soy index de drones</h2>
+<ul>
+  <% dron.forEach((dron) => { %>
+    <li>Nombre del dron => <%=dron.droneName %></li>
+    <li>Propulsores => <%= dron.propellers %></li>
+    <li>Velocidad máxima =><%= dron.maxSpeed %></li>
+  <% }) %>
+</ul>
+
+<a href="/drones/<%= new %>"> Go to the new page </a>
