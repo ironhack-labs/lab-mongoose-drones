@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -18,6 +20,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('layout', 'layout');
 
 app.use(expressLayouts);
 app.locals.title = 'Drnz';
