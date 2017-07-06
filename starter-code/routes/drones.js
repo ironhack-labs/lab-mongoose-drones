@@ -37,7 +37,7 @@ router.post('/drones', (req, res, next) => {
             console.log('error', err);
             next(err);
         } else {
-            res.redirect('/drones');
+            res.redirect('/drones'); 
         }
     });
 
