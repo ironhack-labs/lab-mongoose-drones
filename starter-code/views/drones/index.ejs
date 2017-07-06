@@ -9,10 +9,13 @@
 
   <body>
     <h2>Welcome to <%= title %></h2>
+    <a href="/drones/new">Add new drone</a>
     <ul>
       <% drones.forEach((drone) => { %>
         <li>
-          Drone Name : <%= drone.droneName %>
+          Name: <%= drone.droneName %>
+          Number of propellers: <%= drone.propellers %>
+          Max Speed: <%= drone.maxSpeed %>
         </li>
         <%  }) %>
     </ul>
