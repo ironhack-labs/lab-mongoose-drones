@@ -1,31 +1,18 @@
 // Iteration #1
-const mongoose = require('mongoose');
-
 const Drone = require('../models/drone.js');
+const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/drones-dev').then(()=>{
   let droneData = [
-    {
-      droneName: "General Atomics",
-      propellers: 4,
-      maxSpeed: 18
+  { droneName: 'Creeper XL 500', propellers: 3, maxSpeed: 12 },
+  { droneName: 'Racer 57', propellers: 4, maxSpeed: 20 },
+  { droneName: 'Courier 3000i', propellers: 6, maxSpeed: 18 }
 
-    },
-    {
-      droneName: "MQ-9",
-      propellers: 2,
-      maxSpeed: 12
+];
 
-    },
-    {
-      droneName: "Reaper",
-      propellers: 9,
-      maxSpeed: 34
-
-    }
-  ];
   let droneObj = droneData.map(d => new Drone(d));
 
+Drone.create(droneData,(err,drone)=>{
   droneObj.forEach(d => d.save((err,obj)=>{
     if(err){
       console.log(err);
@@ -34,5 +21,9 @@ mongoose.connect('mongodb://localhost/drones-dev').then(()=>{
 
     }
   }));
+
+
+});
+
 // mongoose.connection.close();
 });
