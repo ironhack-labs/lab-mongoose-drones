@@ -1,15 +1,21 @@
-<h2> Add a new Drone! </h2>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+<h5> Create your own Drone</h5>
 
 <form action="/drones" method="POST">
-  <label for="droneName">Name</label>
+  <label for="droneName"><h6>Name<span style="display:inline-block; width: 25px;"></span>
+</h6></label>
   <input type="text" id="droneName" name="droneName">
- 
+ <br>
 
-  <label for="propellers">Propellers</label>
+  <label for="propellers"><h6>Propellers</h6></label>
   <input type="number" name="propellers" id="propellers">
-
-  <label for="maxSpeed">Max speed</label>
+<br>
+  <label for="maxSpeed"><h6>Max speed</h6></label>
   <input type="number" name="maxSpeed" id="maxSpeed">
-
-  <button type="submit">Create Drone</button>
+<br>
+  <button id="button" type="submit">Create Drone</button>
 </form>
+
+<img class="image" src="drone.jpg" />

@@ -1,8 +1,116 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*, *:after, *:before {
+	box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+
+body {
+  padding: 10px;
+  background-color: #66CCFF;
+}
+
+p {
+
+}
+
+h1 {
+  text-align: center;
+   color:lavender;
+   font: italic;
+   font-size: 36px;
+    line-height: 40px;
+
+}
+
+h2 {
+  text-align: center;
+  color: ;
+  font: italic;
+  font-size: 30px;
+    line-height: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 40px;
+      text-align: center;
+
+}
+
+
+h4 {
+ 
+  text-align: center;
+  font: italic;
+  font-size: 18px;
+  line-height: 20px;
+  /*margin-left: -30px;;
+  */
+    text-align: center;
+    color: #ccffcc;
+
+  
+
+}
+
+h5 {
+    font-size: 14px;
+    line-height: 20px;
+    color: darkslateblue;
+      text-align: center;
+
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+    font-weight: bold;
+    
+
+}
+
+h7 {
+    font-size: 10px;
+    line-height: 15px;
+    text-align:left;
+    font-weight: bold;
+    color: 003399;
+    
+
+}
+
+h8 {
+  color: #ff0000;
+  font-size: 8px;
+  line-height: 15px;
+  text-align: left;
+  font-style: italic
+}
+
+
+
+
+.image {
+  height: 25px;
+  width: 25px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+}
+
+.container {
+  text-align: center
+}
+
+
+ul.a {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+#button {
+  font-size: 10px;
+  border-radius: 5px;
+  background-color: inherit;
 }

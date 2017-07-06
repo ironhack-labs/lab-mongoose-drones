@@ -1,19 +1,25 @@
-<h2>
+<link rel='stylesheet' href='/stylesheets/style.css' />
 
 
 
-    Available Drones</h2>
+
+<h4>Drones In Stock</h4>
+
+
+<ul class = "a">
+    <% drones.forEach((drone) => { %>
+        <li>
+           <h7> Name: </h7> <h8><%= drone.droneName %></h8>
+               <h7> Propellers: </h7> <h8><%= drone.propellers %></h8>
+                   <h7> Speed: </h7> <h8> <%= drone.maxSpeed %> </h8>
+        </li>
+        <%   }) %>
+</ul>
 
 <ul>
-
-    <% drones.forEach((drone) => { %>
-
-        <li>
-            <%= drone.droneName %>: Name
-                <%= drone.propellers %>: Propellers
-                    <%= drone.maxSpeed %>: Speed</li>
-
-
-        <%   }) %>
-
+    <h4>
+        <p><a href="/drones/new">Create Your Own Drone</a></p>
+    </h4>
 </ul>
+
+<img class="image" src="drone.jpg" />
