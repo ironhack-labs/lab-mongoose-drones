@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+input{
+  display: block;
+}
+
+label{
+  color:red;
+  padding: 10px 0 3px 0;
+  display: block;
+}
+
+button{
+  margin-top:10px;
+}

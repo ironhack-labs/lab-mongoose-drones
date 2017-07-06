@@ -8,10 +8,10 @@ const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
-const drones = require('./routes/drones');
+//var users = require('./routes/users');
+var drones = require('./routes/drones');
 
-mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect('mongodb://localhost/pairsDrones');
 
 var app = express();
 
@@ -20,7 +20,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(expressLayouts);
-app.locals.title = 'Drnz';
+app.locals.title = 'Pair Programming Drones';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -31,7 +31,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+//app.use('/users', users);
 app.use('/', drones);
 
 // catch 404 and forward to error handler
