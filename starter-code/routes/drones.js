@@ -11,15 +11,21 @@ router.get('/drones', (req, res, next) => {
     if (err) {
       return next(err);
     } else {
-    res.render('drones/index', {
-      drones: drones
-    });
-  }
-});
+      res.render('drones', {
+        drones: drones
+      });
+    }
+  });
 });
 
-router.post('/drones/new', (req, res, next) => {
+router.get('/drones/new', (req, res, next) => {
   // Iteration #3
+      res.render('drones/new');
+});
+
+router.post('/drones', (req, res, next) => {
+  // Iteration #3
+  console.log(req.body);
   let droneObj = new Drone({
     droneName: req.body.droneName,
     propellers: req.body.propellers,
@@ -32,11 +38,6 @@ router.post('/drones/new', (req, res, next) => {
       res.redirect('/drones');
     }
   });
-});
-
-
-router.post('/drones', (req, res, next) => {
-  // Iteration #3
 });
 
 module.exports = router;
