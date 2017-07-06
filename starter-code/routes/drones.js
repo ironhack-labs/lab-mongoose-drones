@@ -1,7 +1,7 @@
 const express = require('express');
 
 const Drones = require('../models/Drone');
-
+var bodyParser = require('body-parser');
 const router = express.Router();
 
 
@@ -26,19 +26,21 @@ router.get('/new', (req, res, next) => {
 
 });
 
-router.post('/', (req, res, next) => {
+router.post('/new', (req, res, next) => {
   // Iteration #3
-  const newDroneInfo = {
+  console.log(req.body);
+  const dronePepito = new Drone( {
      droneName: req.body.droneName,
      propellers: req.body.propellers,
      maxSpeed: req.body.maxSpeed
- };
-
+ });
+  console.log(dronePepito);
   const newDrone = new Drone(newDroneInfo);
 
-  newDrone.save( (err) => {
+  dronePepito.save( (err) => {
   if (err) {
-    return render('drones/new', { errors: newProduct.errors });
+    console.log("ERROR");
+    return render('drones/new');
   }
   return res.redirect('/index');
 });
