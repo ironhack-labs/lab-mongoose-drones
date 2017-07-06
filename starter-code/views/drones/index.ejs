@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+Drones
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h2>Drones</h2>
+  <p>Welcome to Drones
+  </p>
+  <ul>
+    <% drones.forEach((drone) => { %>
+      <li>
+        <%= drone.droneName %> - $<%= drone.propellers %> - $<%= drone.maxSpeed %> -
+      </li>
+      <%  }) %>
+  </ul>
+
+  <a href="http://localhost:3000/drones/new">Crea un nuevo drone</a>
+  </body>
+</html>
