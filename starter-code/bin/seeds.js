@@ -2,7 +2,7 @@
 const Drone = require('../models/Drone');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/dronesDB')
+mongoose.connect('mongodb://localhost/drones-dev')
     .then(() => {
         const droneData = [{
             droneName: 'Creeper XL 500',
