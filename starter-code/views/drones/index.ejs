@@ -1,0 +1,12 @@
+
+<h2>Drones On Display!</h2>
+
+<a href="/drones"></a>
+
+<ul>
+  <% droneData.forEach((drone) => { %>
+    <li> <%= drone.droneName %>
+         <%= drone.propellers %>
+         <%= drone.maxSpeed %> </li>
+  <% }); %>
+</ul>
