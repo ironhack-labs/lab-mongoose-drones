@@ -1,0 +1,12 @@
+<h2>This are the Drones:</h2>
+<div class="container">
+  <ul>
+    <% drones.forEach((drone)=>{ %>
+      <li>
+      Name : <%= drone.droneName %>
+      Propellers : <%= drone.propellers %>
+      Speed: <%= drone.maxSpeed %>
+      </li>
+    <% }) %>
+  </ul>
+</div>

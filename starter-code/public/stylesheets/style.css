@@ -1,8 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px "Oswald", sans-serif;
+}
+h1{
+  color: #4c5c68;
+  background: #dcdcdd;
+  height: 100px;
+  padding-top: 60px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+h2{
+  color: #4c5c68;
+  background: #c5c3c6;
+  height: 50px;
+  padding-top: 20px;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
+.container{
+  width: 50%;
+  margin: auto;
+}
+
+.container p{
+  font-size: 30px;
+}
 a {
-  color: #00B7FF;
+  color: #1985a1;
+  border:1px solid #1985a1;
+  padding:10px;
 }
