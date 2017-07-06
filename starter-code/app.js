@@ -1,3 +1,4 @@
+/*jshint esversion: 6*/
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -11,7 +12,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 const drones = require('./routes/drones');
 
-mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect('mongodb://localhost/drone4Life');
 
 var app = express();
 
