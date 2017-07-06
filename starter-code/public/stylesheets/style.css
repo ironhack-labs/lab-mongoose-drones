@@ -1,8 +1,22 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #DAE4EC;
+  
+  
 }
 
 a {
   color: #00B7FF;
 }
+
+h1 {
+  font-weight: bold;
+  font-family: 'Fresca', sans-serif;
+  
+}
+
+h2 {
+  font-family: 'Fresca', sans-serif;
+}
+

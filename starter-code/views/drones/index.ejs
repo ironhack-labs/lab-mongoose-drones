@@ -1,0 +1,8 @@
+
+
+<a href="drones/new">Create a new drone</a>
+<ul class="list-group"> 
+    <% droneArray.forEach( (drone) => {
+        %> <li class="list-group-item list-group-item-info"> <%= drone.droneName %> </li>
+    <% } ) %>
+</ul>
