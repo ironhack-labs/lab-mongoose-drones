@@ -1,6 +1,7 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px;
+  font-family:"Fresca", "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #DAE4EC;
   
   
@@ -9,14 +10,3 @@ body {
 a {
   color: #00B7FF;
 }
-
-h1 {
-  font-weight: bold;
-  font-family: 'Fresca', sans-serif;
-  
-}
-
-h2 {
-  font-family: 'Fresca', sans-serif;
-}
-
