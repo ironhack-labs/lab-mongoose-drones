@@ -1,0 +1,9 @@
+<h2>This is the list of drones</h2>
+
+<ul>
+<% product.forEach((element) =>{ %>
+  <li>Name:  <%= element.droneName %> , Propellers:  <%= element.propellers %> , maxSpeed: <%= element.maxSpeed %>   </li>
+<% }) %>
+</ul>
+
+You can go to <a href = "/drones/new">New</a>
