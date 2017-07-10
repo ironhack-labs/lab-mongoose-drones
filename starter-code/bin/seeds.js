@@ -16,7 +16,7 @@ Drone.create(drones, (err, docs) => {
   }
 
   docs.forEach((drone) => {
-    console.log(drone.name)
+    console.log(drone.droneName)
   });
   mongoose.connection.close();
   
