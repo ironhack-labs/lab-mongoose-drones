@@ -4,13 +4,17 @@
 
 <h2>Super Awesome Drone Collection</h2>
 
-<ul>
-  <% droneBuild.forEach((oneDrone)=>{ %>
-    <li>
-        <h3> Name: <%= oneDrone.droneName %> </h3>
-        <p># of Propellers: <%= oneDrone.propellers %> </p>
-        <p> Max Speed: <%= oneDrone.maxSpeed %> </p>
+<div class="row">
+  <div class="col-xs-6 col-md-4">
+    <ul list-style-type="none">
+      <% droneBuild.forEach((oneDrone)=>{ %>
+        <li>
+            <h3> Name: <%= oneDrone.droneName %> </h3>
+            <p># of Propellers: <%= oneDrone.propellers %> </p>
+            <p> Max Speed: <%= oneDrone.maxSpeed %> </p>
 
-    </li>
-   <% }); %>
-</ul>
+        </li>
+       <% }); %>
+    </ul>
+  </div>
+</div>

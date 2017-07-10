@@ -3,22 +3,46 @@
 <a href="/drones">ALL the Drnz</a>
 <a href="/drones/new"> Add a Drnz</a>
 
-<h2>Would you like to add a drone to your collection?</h2>
+<h2>Add them Drnz to your collection?</h2>
 
-<form method="post" action="/drones">
 
-  <label for="drone-name-input">Drone Name</label>
-  <input id="drone-name-input" type="text" name="droneName">
-  <br>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-xs-6">
+    <form class="form-horizontal"  method="post" action="/drones" >
+      <div class="form-group">
+        <label for="drone-name-input" class="col-sm-2 control-label">Drone Name</label>
+        <div class="col-sm-10">
+          <input id="drone-name-input" type="text" name="droneName">
+        </div>
+      </div>
 
-  <label for="drone-propellers-input">Propellers</label>
-  <input id="drone-propellers-input" type="text" name="dronePropellers">
-  <br>
+      <div class="form-group">
+        <label for="drone-propellers-input" class="col-sm-2 control-label">Propellers</label>
+        <div class="col-sm-10">
+          <input id="drone-propellers-input" type="text" name="dronePropellers">
+        </div>
+      </div>
 
-  <label for="drone-maxspeed-input">Max Speed</label>
-  <input id="drone-maxspeed-input" type="text" name="droneMaxSpeed">
-  <br>
+      <div class="form-group">
+        <label for="drone-maxspeed-input" class="col-sm-2 control-label">Max Speed</label>
+        <div class="col-sm-10">
+          <input id="drone-maxspeed-input" type="text" name="droneMaxSpeed">
+        </div>
+      </div>
 
-  <button> Add a Drone </button>
 
-</form>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Add Drone</button>
+        </div>
+      </div>
+    </form>
+
+   </div>
+
+   <div class="col-xs-6">
+       <img src="/images/everyonedrone.gif" alt="oprahdrone">
+   </div>
+  </div>
+</div>
