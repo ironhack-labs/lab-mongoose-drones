@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "seed": "node ./bin/seeds.js",
+    "start-dev": "nodemon ./bin/www",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -15,5 +17,8 @@
     "mongoose": "^4.7.7",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
