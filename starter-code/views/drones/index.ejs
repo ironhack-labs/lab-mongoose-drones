@@ -1,0 +1,11 @@
+<h2>Listado de drones</h2>
+<table border="1" cellpadding="10">
+<% drones.forEach((drone)=>{ %>
+    <tr>
+        <td><%= drone.droneName  %></td>
+        <td><%= drone.propellers  %></td>
+        <td><%= drone.maxSpeed  %></td>
+    </tr>
+<% }) %>
+</table>
+<a href="drones/new">añadir un drone</a>
