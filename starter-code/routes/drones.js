@@ -1,21 +1,46 @@
 const express = require('express');
-
-// require the Drone model here
+const Drone = require('../models/drone')
 
 const router = express.Router();
 
 
 router.get('/drones', (req, res, next) => {
-  // Iteration #2
+
+  Drone.find({}, (err, drones) => {
+    if (err) {
+      next(); return;
+    } else {
+    res.render('drones/index', {drones});
+    }
+  })
+
 });
 
 
 router.get('/drones/new', (req, res, next) => {
-  // Iteration #3
+  res.render('drones/new')
 });
 
 router.post('/drones', (req, res, next) => {
-  // Iteration #3
+
+  // if (err) {
+  //   next(); return;
+  // } else {
+
+    const {droneName, propellers, maxSpeed} = req.body;
+    const newDrone = new Drone({droneName, propellers, maxSpeed});
+
+    newDrone.save((err) => {
+      if (err) {
+        console.log('Dang, drone NOT added.');
+      } else {
+        console.log('Drone.');
+        res.redirect('/drones');
+      }
+
+    });
+  // }
+
 });
 
 module.exports = router;
