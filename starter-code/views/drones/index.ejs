@@ -1,0 +1,15 @@
+<h2> Welcome to drone world ! </h2>
+
+
+<ul>
+  <% drones.forEach((aDrone) => { %>
+    <!-- display info from aDrone -->
+    <li>
+      <h3> Drone Name: <%= aDrone.droneName %> </h3>
+      <p> Number of Propellers: <%= aDrone.propellers %> </p>
+      <p> Max Speed:  <%= aDrone.maxSpeed %> </p>
+
+    </li>
+
+  <% }); %>
+</ul>
