@@ -1,0 +1,20 @@
+<h2> Add a New Drone </h2>
+
+<!-- router.post('/products', (req, res, next) => { ....}) -->
+<form action="/drones" method="post">
+
+    <label for="drone-name-input"> Drone Name </label>
+    <input id="drone-name-input" name="droneName" type="text">
+    <br>
+
+    <label for="price-input"> Number of Propellers </label>
+    <input id="price-input" name="dronePropellers" type="number" step="0.10">
+    <br>
+
+    <label for="maxSpeed-input"> Max Speed </label>
+    <input id="maxSpeed-input" name="droneMaxSpeed" type="number">
+    <br>
+
+  <button> Save drone </button>
+
+</form>
