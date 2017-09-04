@@ -1,8 +1,34 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url('http://www.uasvision.com/wp-content/uploads/2014/03/Delat-Drone.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 a {
-  color: #00B7FF;
+  color: rgba(0,0,0,.8);
+  margin-right: 100px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 72px;
+}
+
+nav {
+  text-align: center;
+
+}
+
+.drones {
+  background: rgba(255,255,255,.6);
+  width: 200px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.welcome {
+  font-size: 24px;
+
 }
