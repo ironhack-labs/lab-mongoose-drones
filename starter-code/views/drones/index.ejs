@@ -1,0 +1,10 @@
+<h2> Homeland Drones </h2>
+
+
+  <div class="drones">
+    <% drones.forEach(drone => { %>
+        <h3>Name: <%= drone.droneName %></h3>
+        <p>Propellers: <%= drone.propellers %></p>
+        <p>Max Speed: <%= drone.maxSpeed %></p>
+    <% }); %>
+  </div>
