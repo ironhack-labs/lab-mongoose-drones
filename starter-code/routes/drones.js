@@ -14,6 +14,7 @@ router.get('/drones', (req, res, next) => {
     res.render('drones/index', {
       drones: drones
     })
+		
   })
 });
 
