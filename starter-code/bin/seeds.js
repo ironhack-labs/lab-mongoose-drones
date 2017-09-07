@@ -6,25 +6,13 @@ const {dbURL} = require('../config/db.js')
 
 mongoose.connect(dbURL, {useMongoClient: true})
 
-const drones = [
-	{
-		droneName: 'Drone 1',
-		propellers: '10',
-		maxSpeed: '100'
-	},
-	{
-		droneName: 'Drone 2',
-		propellers: '10',
-		maxSpeed: '100'
-	},
-	{
-		droneName: 'Drone 3',
-		propellers: '10',
-		maxSpeed: '100'
-	}
-]
+const droneData = [
+  { droneName: 'Creeper XL 500', propellers: 3, maxSpeed: 12 },
+  { droneName: 'Racer 57', propellers: 4, maxSpeed: 20 },
+  { droneName: 'Courier 3000i', propellers: 6, maxSpeed: 18 }
+];
 
-Drone.create(drones, (err, docs) => {
+Drone.create(droneData, (err, docs) => {
 	if (err) {
 		throw err
 	}
