@@ -1,8 +1,35 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../drone-bg.jpg');
+  background-size: cover;
+  width: 100%;
 }
 
-a {
-  color: #00B7FF;
+h1 {
+  text-shadow: 2px 2px #ccc;
 }
+
+.actions {
+  margin-top: 50px;
+  margin-left: 45px;
+  margin-bottom: 15px;
+}
+
+.actions a {
+
+  border: 2px solid rgb(0, 183, 255);
+  color: rgb(0, 183, 255);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.drone-list ul {
+  list-style: none;
+}
+.drone-list li {
+  width: 20%;
+  border: 2px solid rgb(0, 183, 255);
+  background-color: rgba(0, 183, 255, 0.4);
+  margin: 5px;
+  padding: 5px 10px;
