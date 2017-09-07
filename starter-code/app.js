@@ -6,12 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
+const {dbURL} = require('./config/db');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 const drones = require('./routes/drones');
 
-mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect(dbURL);
 
 var app = express();
 
@@ -20,7 +21,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(expressLayouts);
-app.locals.title = 'Drnz';
+app.locals.title = 'Drones';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
