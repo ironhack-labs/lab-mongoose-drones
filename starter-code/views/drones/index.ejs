@@ -1,7 +1,21 @@
-<h1>DRONES!!!!!! MUTHAFUCKERRR</h1>
-<ul>
-  <% res.forEach((item) => { %>
-<li><%= item %></li>
-
-<%  }) %>
-</ul>
+<h2>DRONES!!!!!! MUTHAFUCKERRR</h2>
+<div class="drone-list">
+  <ul>
+    <% res.forEach((item) => { %>
+    <li class="drone">
+      <p class="name"><%= item.droneName %></p>
+      <p class="propellers">
+        <span class="label">Propellers:</span>
+        <span class="value"><%= item.propellers %></span>
+      </p>
+      <p class="max-speed">
+        <span class="label">Max Speed:</span>
+        <span class="value"><%= item.maxSpeed %></span>
+      </p>
+    </li>
+    <% }) %>
+  </ul>
+  <p class="actions">
+    <a class="add-link" href="drones/new">Add a new drone!!</a>
+  </p>
+</div>
