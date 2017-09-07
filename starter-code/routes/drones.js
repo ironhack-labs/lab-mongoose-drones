@@ -1,12 +1,22 @@
 const express = require('express');
-
-// require the Drone model here
-
 const router = express.Router();
+const Drone = require('../models/Drone');
+// require the Drone model here
 
 
 router.get('/drones', (req, res, next) => {
-  // Iteration #2
+
+// RETRIEVE: Drone list
+router.get('/', (req, res, next) => {
+  Drone.find({}, (err, Drones) => {
+    if (err) { return next(err); }
+
+    res.render('Drones/Drone_list', {
+      title:'Lista de Droneos',
+      Drones: Drones
+    });
+  });
+});// Iteration #2
 });
 
 
