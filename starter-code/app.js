@@ -10,8 +10,9 @@ const mongoose = require('mongoose');
 var index = require('./routes/index');
 var users = require('./routes/users');
 const drones = require('./routes/drones');
+const {dbURL} = require('./config/db');
 
-mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect(dbURL, {useMongoClient: true});
 
 var app = express();
 
@@ -19,8 +20,11 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.set('layout','layout');
 app.use(expressLayouts);
+
 app.locals.title = 'Drnz';
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
