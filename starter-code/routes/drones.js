@@ -6,22 +6,24 @@ const Drone = require('../models/Drone');
 
 router.get('/drones', (req, res, next) => {
 
-// RETRIEVE: Drone list
-router.get('/', (req, res, next) => {
-  Drone.find({}, (err, Drones) => {
-    if (err) { return next(err); }
+  // RETRIEVE: Drone list
+  router.get('/', (req, res, next) => {
+    Drone.find({}, (err, Drones) => {
+      if (err) {
+        return next(err);
+      }
 
-    res.render('Drones/Drone_list', {
-      title:'Lista de Droneos',
-      Drones: Drones
+      res.render( /*'Drones/Drone_list'*/ 'index', {
+        title: 'List of Drones',
+        Drones: Drones
+      });
     });
-  });
-});// Iteration #2
+  }); // Iteration #2
 });
 
 
 router.get('/drones/new', (req, res, next) => {
-  // Iteration #3
+  res.render('new') // Iteration #3
 });
 
 router.post('/drones', (req, res, next) => {
