@@ -1,0 +1,10 @@
+<h2>Mother of Drones</h2>
+  <ul>
+    <% drones.forEach((aDrone) => { %>
+      <h3><%= aDrone.droneName %></h3>
+    <% }) %>
+  </ul>
+  <form action='/drones/new'>
+    <button type='submit'>Add New Drone</button>
+  </form>
+  
