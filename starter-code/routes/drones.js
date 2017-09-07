@@ -7,7 +7,7 @@ const Drone = require('../models/drone');
 const router = express.Router();
 
 //list
-router.get('/drones', (req, res, next) => {
+router.get('/', (req, res, next) => {
    Drone.find({}, (err, drones) => {
    	console.log(drones);
     res.render('drones/index', {
@@ -17,15 +17,13 @@ router.get('/drones', (req, res, next) => {
 });
 
 
-router.get('/drones/new', (req, res, next) => {
-  
+router.get('//new', (req, res, next) => {
   res.render('drones/new');
-
 });
 
 
 //create
-router.post('/drones', (req, res, next) => {
+router.post('/', (req, res, next) => {
 	// Take the params, and translate them into a new object
   // Iteration #3
   const droneInfo = {
@@ -44,6 +42,18 @@ router.post('/drones', (req, res, next) => {
 			res.redirect('/drones');
 		}
   });
+});
+
+
+router.post('/:id/delete', (req, res, next) => {
+  const droneId = req.params.id;
+
+  Drone.findByIdAndRemove(droneId, (err, drone) => {
+    if (err){ return next(err); }
+    return res.redirect('/drones');
+
+  });
+
 });
 
 module.exports = router;

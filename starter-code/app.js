@@ -31,7 +31,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/', drones);
+app.use('/drones', drones);
 app.use('/users', users);
 
 
