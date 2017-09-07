@@ -8,6 +8,8 @@ const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 const {dbURL} = require('./config/db');
 
+const dronesRouter = require('./routes/drones')
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 const drones = require('./routes/drones');
@@ -19,6 +21,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('layout', 'index');
 
 app.use(expressLayouts);
 app.locals.title = 'Drnz';
@@ -32,8 +35,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
-app.use('/', drones);
+//app.use('/users', users);
+//app.use('/', dronesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

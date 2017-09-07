@@ -1,1 +1,11 @@
-<p>Welcome to <%= title %></p>
+<h2>Welcome to <%= title %></h2>
+
+
+<ul>
+  <% drones.forEach((d) => { %>
+    <li>
+      <%= d.droneName %> - $<%= d.propellers %> - $<%= d.maxSpeed %>
+    </li>
+  <%  }) %>
+</ul>
+<a href="/drones">Add new product</a>
