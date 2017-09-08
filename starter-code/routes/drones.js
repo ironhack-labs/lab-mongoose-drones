@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
   Drone.find({},(err, drones)=> {
     if (err){return next(err); }
-    res.render('drones/drone-list', {
+    res.render('drones/drones-list', {
       title: 'Drone list',
       drones: drones
     })
