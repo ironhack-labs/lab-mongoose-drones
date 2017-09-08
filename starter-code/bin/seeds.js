@@ -1,9 +1,7 @@
-// Iteration #1
 const mongoose = require ('mongoose');
 const Drone = require ('../models/Drone');
-const {dbURL} = require ('mongodb://localhost/drones-dev');
+const {dbURL} = require ('..config/db');
 
-//mirar aqui
 
 mongoose.connect (dbURL, {useMongoClient: true});
 
@@ -14,10 +12,10 @@ const droneData = [
 ]
 
 
-Drone.create (droneData,(err,docs)=> {
+Drone.create (droneList,(err,docs)=> {
   if(err) {
     throw err;
   }
-  docs.forEach(d => console.log(d.name));
+  docs.forEach(d => console.log(d.droneName));
   mongoose.connection.close();
 })
