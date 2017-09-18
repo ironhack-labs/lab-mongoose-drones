@@ -8,23 +8,23 @@ const Drone = require('../models/drone');
 // droneName, propellers and maxSpeed
 const drones = [
   {
-droneName: "3point0.2"
+droneName: "3point0.2",
     propellers:  10,
     maxSpeed:120,
   },
   {
-    droneName: "the_dude"
+    droneName: "the_dude",
         propellers:  4,
         maxSpeed:12,
   },
   {
-    droneName: "power_ranger_el_blanco"
+    droneName: "power_ranger_el_blanco",
         propellers:  20,
         maxSpeed:240,
   }
 ];
 
-// create method
+// create method "callback"
 Drone.create(drones, (err, docs) => {
   if (err) {
     throw err;
@@ -34,4 +34,4 @@ Drone.create(drones, (err, docs) => {
     console.log(drone.droneName)
   });
   mongoose.connection.close();
-});
+  });

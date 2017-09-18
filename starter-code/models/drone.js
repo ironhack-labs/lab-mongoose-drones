@@ -9,5 +9,5 @@ const DroneSchema = new Schema({
 
 });
 
-const Drones = mongoose.model('Drone', DroneSchema);
+const Drone = mongoose.model('Drone', DroneSchema);
 module.exports = Drone;
