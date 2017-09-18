@@ -1,0 +1,9 @@
+<h2> Drone City </h2>
+<ul>
+<% droneData.forEach((drone) => { %>
+  <li>
+    <%= drone.droneName %> - $<%= drone.propellers %> - $<%= drone.speed %>
+    <a href="/drones/<%= drone._id %>">Link</a>
+  </li>
+<% }) %>
+</ul>
