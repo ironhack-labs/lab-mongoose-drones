@@ -1,0 +1,10 @@
+<!-- Add an <h2> tag for the page's heading. -->
+<!-- Use a forEach loop to display tags with each drone's droneName, propellers, and speed. -->
+<!-- In the views/index.ejs (homepage) view file: -->
+<!-- Add a link that goes to the /drones route. -->
+
+<h2>
+   <%dornes.forEach((drone)=> {
+  <%=drone.droneNAme%> - <%= drone.propellers %> - <%=drone.maxSpeed=>
+<% }) %>
+</h2>
