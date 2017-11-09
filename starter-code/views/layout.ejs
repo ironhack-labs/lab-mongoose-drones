@@ -2,10 +2,17 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
   </head>
   <body>
-    <h1><%= title %></h1>
+    <div class="container">
+      <div class="row">
+        <div class="jumbotron">
+            <h1><%= title %></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt viverra elementum. Integer et fringilla lectus, eu mattis ligula. Mauris dictum, mauris id ultricies porttitor, odio purus ultrices sapien, vitae ultrices justo nunc et arcu. Suspendisse suscipit, libero ac accumsan volutpat</p>
+          </div>
+      </div>
+    </div>
     <%- body %>
   </body>
 </html>

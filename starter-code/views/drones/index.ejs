@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-md-6">
+      <h2>All the drones</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Drone name</th>
+            <th>Propellers</th>
+            <th>Max speed</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        <% drones.forEach((drone) => { %>
+          <tr>
+            <td><%= drone.droneName %></td>
+            <td><%= drone.propellers %></td>
+            <td><%= drone.maxSpeed %></td>
+          </tr>
+        <%  }) %>
+      </tbody>
+      </table>
+      <a href="/drones/new" class="btn btn-primary btn-lg">Create new drone</a>
+    </div>
+  </div>
+
+</div>
