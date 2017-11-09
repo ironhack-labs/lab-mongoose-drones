@@ -17,7 +17,7 @@ const drone = [
   },
 ];
 
-//Dron.collection.drop();
+Dron.collection.drop();
 
 Dron.create(drone, (err, docs) => {
   if (err) {
