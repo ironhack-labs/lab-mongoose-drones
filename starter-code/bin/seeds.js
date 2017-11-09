@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/drones', {useMongoClient: true});
-
 const Drone = require('../models/drone');
 
 const drones = [
