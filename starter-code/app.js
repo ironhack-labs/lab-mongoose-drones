@@ -14,12 +14,13 @@ const drones = require('./routes/drones');
 mongoose.connect('mongodb://localhost/drones-dev');
 
 var app = express();
+app.use(expressLayouts);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(expressLayouts);
+app.set('layout', 'layout/main-layout');
 app.locals.title = 'Drnz';
 
 // uncomment after placing your favicon in /public
