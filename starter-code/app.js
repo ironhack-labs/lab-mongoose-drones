@@ -8,11 +8,9 @@ const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
 const drones = require('./routes/drones');
 
-// original --mongoose.connect('mongodb://localhost/drones-dev');
-mongoose.connect('mongodb://localhost/drones-dev',{useMongoClient: true});
+// original mongoose.connect('mongodb://localhost/drones-dev');
 
 var app = express();
 
@@ -32,7 +30,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
 app.use('/', drones);
 // ¿?----app.use('/drones', drones);
 
