@@ -1,7 +1,7 @@
 <h2>Drones</h2>
-<ul>
+<ul class="list-group">
   <% drones.forEach((drone) => { %>
-    <li>
+    <li class="list-group-item">
       <%= `name: ${drone.droneName}, propellers: ${drone.propellers}, speed:${drone.maxSpeed}` %>
     </li>
   <%  }) %>
