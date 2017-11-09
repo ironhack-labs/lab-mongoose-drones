@@ -1,5 +1,5 @@
 const express = require('express');
-
+const Drones = require('../models/drone');
 // require the Drone model here
 
 const router = express.Router();
@@ -7,6 +7,11 @@ const router = express.Router();
 
 router.get('/drones', (req, res, next) => {
   // Iteration #2
+  console.log("entro en el get");
+  Drones.find({}, (err, drones) => {
+    if (err) {return next(err);}
+    res.render('drones/index', {drones: drones});
+  });
 });
 
 
