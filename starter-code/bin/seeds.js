@@ -1,6 +1,6 @@
 // Iteration #1
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/shop-drones', {useMongoClient: true});
+mongoose.connect('mongodb://localhost/drones-dev', {useMongoClient: true});
 const Dron = require('../models/drone.js');
 
 droneProducts = [{ droneName: "DJI Phantom 3", propellers: 4, maxSpeed: 20},
