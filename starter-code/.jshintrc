@@ -1,0 +1,16 @@
+'use strict'
+{
+  “undef”: true,
+  “unused”: true,
+  “strict”: "global",
+  “esversion”: 6,
+  "globals: {
+       "const": true,
+    “console”: true,
+    “require”: true,
+    “module”: true,
+    “setTimeout”:true,
+    “setInterval”:true,
+    “clearInterval”:true
+  }
+}
