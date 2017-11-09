@@ -1,0 +1,21 @@
+<!-- views/drones/new.ejs -->
+<h2>ADD A NEW DRONE</h2>
+
+<form action="/drones" method="POST">
+  <div class="display">
+    <label for="droneName">Drone - Name</label>
+    <input type="text" id="droneName" name="droneName">
+  </div>
+
+  <div class="display">
+    <label for="propellers">Propellers</label>
+    <input type="number" name="propellers" id="propellers">
+  </div>
+
+  <div class="display">
+    <label for="maxSpeed">Max - Speed</label>
+    <input type="number" name="maxSpeed" id="maxSpeed">
+</div>
+
+  <button type="submit">Create Drone</button>
+</form>

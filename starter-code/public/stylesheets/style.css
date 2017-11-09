@@ -1,8 +1,53 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("../images/droneback.jpg");
+  background-size: cover;
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 20px;
+  color: black;
+}
+
+p {
+  font-size: 26px;
 }
 
 a {
-  color: #00B7FF;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+  color: black;
+  margin: 10px;
+}
+
+button {
+  border: 0px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+}
+
+label {
+  color: black;
+  font-weight: bold;
+}
+
+.display {
+  display: flex;
+  width: 25%;
+  margin: 20px;
+  justify-content: space-between;
 }
