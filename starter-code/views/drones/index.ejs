@@ -1,0 +1,14 @@
+  <% drones.forEach((aDrone) => { %>
+    <div>
+      <div class="col30 inline-block .rectangleGray">
+        <%=aDrone.droneName%>
+      </div>
+      <div class="col30 inline-block .rectangleGray">
+        <%=aDrone.propellers%>
+      </div>
+      <div class="col30 inline-block .rectangleGray">
+        <%=aDrone.maxSpeed%>
+      </div>
+    </div>
+  <% }) %>
+<div><a href="/drones/new"><button>Add new item</button></a></div>
