@@ -8,9 +8,10 @@ const expressLayouts = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 
 var index = require('./routes/index');
+
 const drones = require('./routes/drones');
 
-// original mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect('mongodb://localhost/drones-dev');
 
 var app = express();
 
@@ -31,7 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/', drones);
-// ¿?----app.use('/drones', drones);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

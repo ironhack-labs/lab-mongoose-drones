@@ -3,9 +3,10 @@ const Schema= mongoose.Schema;
 
 const DroneSchema= new Schema ({
   droneName : String,
-  propelles: Number,
+  propellers: Number,
   maxSpeed: Number
 });
 
-const Drone =mongoose.model('Drones',DroneSchema);
+const Drone =mongoose.model('Drone',DroneSchema);
+//const Drone =mongoose.model('Drones',DroneSchema);
 module.exports =Drone;
