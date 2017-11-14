@@ -3,18 +3,18 @@
 <form method="post" action="/drones">
   <div>
     <label for="drone-name"> Model Name: </label>
-    <input type="text" name="droneName" id="drone-name">
+    <input type="text" name="droneName" placeholder="e.g. ModelT"id="drone-name">
   </div>
 
   <div>
     <label for="propellers"> Number of Propellers: </label>
-    <input type="number" name="propellers" id="propellers">
+    <input type="number" name="propellers" placeholder="7" id="propellers">
   </div>
 
   <div>
     <label for="max-speed"> Maximum Speed (meters per second): </label>
-    <input type="number" name="maxSpeed" id="max-speed">
+    <input type="number" name="maxSpeed" placeholder="45" id="max-speed">
   </div>
 
-  <button> Add this drone </button>
+  <button class="btn btn-info"> Add this drone </button>
 </form>
