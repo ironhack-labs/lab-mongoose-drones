@@ -11,7 +11,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 const drones = require('./routes/drones');
 
-mongoose.connect('mongodb://localhost/drones-dev');
+require('./config/mongoose-setup');
 
 var app = express();
 
@@ -33,6 +33,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/', drones);
+
+//ROUTES
+const myDroneRouter = require("./routes/drones");
+app.use(myDroneRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
