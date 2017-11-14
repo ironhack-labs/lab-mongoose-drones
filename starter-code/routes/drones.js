@@ -23,10 +23,25 @@ router.get("/drones", (req, res, next) => {
 
 router.get('/drones/new', (req, res, next) => {
   // Iteration #3
+  res.render("drone-views/drone-form");
 });
 
 router.post('/drones', (req, res, next) => {
   // Iteration #3
+  const theDrone = new DroneModel ({
+    droneName: req.body.inputName,
+    propellers: req.body.inputPropellers,
+    maxSpeed: req.body.inputSpeed
+  });
+
+  theDrone.save()
+    .then(() => {
+      res.redirect('/drones');
+    })
+    .catch((err) => {
+      next(err);
+    });
 });
+
 
 module.exports = router;

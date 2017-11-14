@@ -5,8 +5,17 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <header>
+      <h1><%= title %></h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/drones">Drones List</a>
+        <a href="/drones/new">Add a Drone</a>
+      </nav>
+    </header>
+
     <%- body %>
+    
     <footer>
       <p>Made by sleep-deprived people.</p>
     </footer>

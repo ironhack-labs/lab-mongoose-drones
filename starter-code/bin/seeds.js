@@ -2,22 +2,23 @@
 require("../config/mongoose-setup");
 
 const DroneModel = require("../models/drone-model");
+// forgot to declare as a const to make it work
 
 const droneInfo = [
   {
     droneName: "Pterodactyl",
-    propellers: 8,
-    maxSpeed: 240
+    propellers: 4,
+    maxSpeed: 20
   },
   {
     droneName: "Sordes",
-    propellers: 6,
-    maxSpeed: 200
+    propellers: 3,
+    maxSpeed: 12
   },
   {
     droneName: "Jeholopterus",
-    propellers: 4,
-    maxSpeed: 160
+    propellers: 6,
+    maxSpeed: 18
   }
 ];
 

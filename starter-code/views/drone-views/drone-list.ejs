@@ -1,6 +1,8 @@
 <p>Welcome to <%= title %> </p>
 <ul>
   <% listOfDrones.forEach((oneDrone) => { %>
-    <li> <%= oneDrone %> </li>
+    <li> Drone Model: <%= oneDrone.droneName %> </li>
+      <p> Propellers: <%= oneDrone.propellers %> </p>
+      <p> Max Speed: <%= oneDrone.maxSpeed %> </p>
   <% }); %>
 </ul>
