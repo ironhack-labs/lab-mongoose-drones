@@ -1,0 +1,25 @@
+<h2> Add New Drone </h2>
+
+<form method="post" action="/drones">
+  <label for="drone-name-input"> Drone Name
+  </label>
+  <input id="drone-name-input" type="text" placeholder="e.g. TX 45" name="DroneName"  />
+  <br />
+
+  <label for="drone-propellers-input"> Number of Propellers
+  </label>
+  <input id="drone-propellers-input" type="number" step="0.10" placeholder="1 - 6" name="DronePropellers"  />
+  <br />
+
+  <label for="drone-speed-input"> Drone Max Speed
+  </label>
+  <input id="drone-speed-input" type="number" placeholder="e.g. 1 - 18" name="DroneMaxSpeed"  />
+  <br />
+
+  <%# <label for="product-description-input"> Product Description
+  </label>
+  <textarea id="product-description-input" type="text" placeholder="e.g. Nintendo Gaming Console" name="ProductDescription">  </textarea>
+  <br />%>
+
+  <button> Save This Drone </button>
+</form>

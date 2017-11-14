@@ -1,8 +1,19 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("../media/drone.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: snow;
+
 }
 
 a {
   color: #00B7FF;
+}
+
+header {
+  background-color: lightgoldenrodyellow;
+  display: flex;
+  justify-content: space-between;
 }
