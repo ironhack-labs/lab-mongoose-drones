@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <%- body %>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <header>
+
+    <h1>Drone Shop</h1>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/drones">Drones</a>
+      <a href="/drones/new"> Add a new drone</a>
+    </nav>
+  </header>
+  <%- body %>
+</body>
+<footer>
+  <p> Made with 💚 at Ironhack.</p>
+</footer>
+
 </html>
