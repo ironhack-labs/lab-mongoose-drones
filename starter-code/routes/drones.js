@@ -1,12 +1,12 @@
-const express = require('express');
+const express = require("express");
 
 // require the Drone model here
-require("../models/drone-model");
+const DroneModel = require("../models/drone-model");
 
 const router = express.Router();
 
 
-router.get('/drones', (req, res, next) => {
+router.get("/drones", (req, res, next) => {
   // Iteration #2
   DroneModel
   .find()
@@ -14,13 +14,12 @@ router.get('/drones', (req, res, next) => {
   .then((droneResults) => {
     // create a local variable for the view to access the DB results
     res.locals.listOfDrones = droneResults;
-    res.render("drones/index");
+    res.render("drone-views/drone-list");
   })
   .catch((err) => {
     next(err);
   });
 });
-
 
 router.get('/drones/new', (req, res, next) => {
   // Iteration #3
