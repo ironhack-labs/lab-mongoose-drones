@@ -3,6 +3,21 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+h2 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #38ADD1;
+}
+
 a {
   color: #00B7FF;
+  padding-right: 4px;
+}
+
+form div {
+  padding: 10px 5px;
+  margin: 10px 0;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 500px;
 }
