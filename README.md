@@ -127,7 +127,7 @@ Now that we know what we are starting with, let's get to coding!
 Our first step is to **create the `Drone` model** and **seed some initial drones** in our database.
 
 The `Drone` model should have:
-- `droneName` - String (name of the drone model, like _General Atomics MQ-9 Reaper_)
+- `name` - String (name of the drone model, like _General Atomics MQ-9 Reaper_)
 - `propellers` - Number (amount of propellers, like _4_)
 - `maxSpeed` - Number (meters per second for the drone's maximum speed, like _18_)
 
@@ -135,11 +135,11 @@ The `Drone` model should have:
 
 1. Create the `drone.js` model file in the `models/` folder.
 2. In the `drone.js` model file:
-    - Create the drone schema with `droneName`, `propellers` and `maxSpeed`.
+    - Create the drone schema with `name`, `propellers` and `maxSpeed`.
     - Create the `Drone` model with the schema.
     - Export the `Drone` model.
 4. In the `bin/seeds.js` file:
-    - Create an array of 3 objects, each with `droneName`, `propellers` and `maxSpeed` for our initial drones.
+    - Create an array of 3 objects, each with `name`, `propellers` and `maxSpeed` for our initial drones.
     - Call the `Drone` model's `create` method with the array as argument.
     - In the `create` method's callback, display feedback.
 5. Run the seed file with `node` to seed your database.
@@ -153,9 +153,9 @@ For the drones array in **Step 4**, it should look something like this:
 
 ```javascript
 const droneData = [
-  { droneName: 'Creeper XL 500', propellers: 3, maxSpeed: 12 },
-  { droneName: 'Racer 57', propellers: 4, maxSpeed: 20 },
-  { droneName: 'Courier 3000i', propellers: 6, maxSpeed: 18 }
+  { name: 'Creeper XL 500', propellers: 3, maxSpeed: 12 },
+  { name: 'Racer 57', propellers: 4, maxSpeed: 20 },
+  { name: 'Courier 3000i', propellers: 6, maxSpeed: 18 }
 ];
 ```
 
@@ -163,7 +163,7 @@ Also for **Step 4**, you should check for the error in the callback and throw it
 
 Before **Step 5**, remember to call Mongoose's `disconnect` method in the `create` callback. Otherwise your seeds script will just keep the connection open and never finish.
 
-For **Step 6**, you can confirm that your drones are saved by running this Mongo query:
+For **Step 5**, you can confirm that your drones are saved by running this Mongo query:
 
 ```javascript
 > db.drones.find()
@@ -191,7 +191,7 @@ Here's the route we will be using:
 3. Create the `index.ejs` view file inside the `views/drones/` folder.
 4. In the `views/drones/index.ejs` view file:
     - Add an `<h2>` tag for the page's heading.
-    - Use a `forEach` loop to display tags with each drone's `droneName`, `propellers`, and `speed`.
+    - Use a `forEach` loop to display tags with each drone's `name`, `propellers`, and `speed`.
 5. In the `views/index.ejs` (homepage) view file:
     - Add a link that goes to the `/drones` route.
 
@@ -229,13 +229,13 @@ Here are the routes we will be using:
 4. In the `views/drones/new.ejs` view file:
     - Add an `<h2>` for the page's heading.
     - Add a `<form>` tag that makes a POST request to `/drones`.
-    - Add `<input>` tags inside the `<form>` tag for a new drone's `droneName`, `propellers` and `maxSpeed`
+    - Add `<input>` tags inside the `<form>` tag for a new drone's `name`, `propellers` and `maxSpeed`
     - Add a `<button>` tag inside the `<form>` tag so that it can be submitted.
 5. In the `views/drones/index.ejs` view file:
     - Add a link that goes to the `/drones/new` route.
 6. Locate the `/drones` POST route in `routes/drones.js`.
 7. In that route's callback:
-    - Create an object with keys for `droneName`, `propellers` and `maxSpeed`.
+    - Create an object with keys for `name`, `propellers` and `maxSpeed`.
     - Values for those keys should come from the form submission (`req.body`).
     - Create an instance of the `Drone` model with the object you made in the previous step.
     - Call the `save` method to save the new drone to the database.
@@ -250,7 +250,7 @@ For **Step 4**, your form will look something like this:
 <form method="post" action="/drones">
   <div>
     <label for="drone-name"> Model Name: </label>
-    <input type="text" name="droneName" id="drone-name">
+    <input type="text" name="name" id="drone-name">
   </div>
 
   <div>
