@@ -1,0 +1,10 @@
+<h2> Your drone </h2>
+
+  <ul>
+    <li> Name: <%= drone.droneName %> </li>
+    <li> Propellers: <%= drone.propellers %> </li>
+    <li> Max speed: <%= drone.maxSpeed %> </li>
+    <li> <button> <a href="/drones/<%= drone._id %>/edit">Edit</a> </li>
+    <li> <button> <a href="/drones/<%= drone._id %>/delete">Delete</a> </li>
+    <li> <button> <a href="/drones/">Back to list of drones</a> </li>
+  </ul>
