@@ -10,7 +10,8 @@ const index          = require('./routes/index');
 const users          = require('./routes/users');
 const drones         = require('./routes/drones');
 
-mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect('mongodb://localhost/drones-dev', {useMongoClient:true});
+
 
 const app = express();
 
