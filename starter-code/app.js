@@ -10,8 +10,6 @@ const index          = require('./routes/index');
 const users          = require('./routes/users');
 const drones         = require('./routes/drones');
 
-mongoose.connect('mongodb://localhost/drones-dev');
-
 const app = express();
 
 // view engine setup
