@@ -5,6 +5,10 @@
     <li><%= drone.name %></li>
     <li><%= drone.propellers %></li>
     <li><%= drone.maxSpeed %></li>
+    <a href="/drones/<%= drone._id %>/edit">Edit</a>
+    <form action="/drones/<%= drone._id %>/delete" method="post">
+        <input type="submit" value="Delete">
+    </form>
 <% }); %>
 </ul>
 

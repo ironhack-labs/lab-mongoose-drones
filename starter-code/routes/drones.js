@@ -8,9 +8,8 @@ const dronesController = require('../controllers/drones.controller');
 router.get('/', dronesController.index);
 router.get('/new', dronesController.new);
 router.post('/', dronesController.create);
-
-// router.post('/drones', (req, res, next) => {
-//   // Iteration #3
-// });
+router.get('/:id/edit', dronesController.edit);
+router.post('/:id', dronesController.update);
+router.post('/:id/delete', dronesController.delete);
 
 module.exports = router;

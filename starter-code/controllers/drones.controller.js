@@ -9,7 +9,9 @@ module.exports.index = (req, res, next) => {
 };
 
 module.exports.new = (req, res, next) => {
-  res.render('drones/new');
+  res.render('drones/form', {
+    drone: new Drone()
+  });
 };
 
 module.exports.create = (req, res, next) => {
@@ -20,21 +22,35 @@ module.exports.create = (req, res, next) => {
   })
 };
 
-// module.exports.new = (req, res, next) => {
-//   res.render('products/form', {
-//     product: new Product()
-//   });
-// };
+module.exports.edit = (req, res, next) => {
+  Drone.findById(req.params.id).then((drone) => {
+    res.render('drones/form', {
+      drone: drone
+    });
+  });
+};
 
-// module.exports.create = (req, res, next) => {
-//   const productData = req.body;
+module.exports.update = (req, res, next) => {
+  const droneId = req.params.id;
+  const updates = {
+      name: req.body.name,
+      propellers: req.body.propellers,
+      maxSpeed: req.body.maxSpeed
+  };
+console.log(droneId)
+  Drone.findByIdAndUpdate(droneId, updates).then((drone) => {
+    console.log(drone)
+    res.redirect('/drones');
+  });
+};
 
-//   const newProduct = new Product(productData);
+module.exports.delete = (req, res, next) => {
+  const droneId = req.params.id;
 
-//   newProduct.save().then((product) => {
-//     res.redirect('/products');
-//   })
-// };
+  Drone.findByIdAndRemove(droneId).then((drone) => {
+    return res.redirect('/drones');
+  });
+};
 
 // module.exports.show = (req, res, next) => {
 //   Product.findById(req.params.id).then((product) => {
@@ -45,32 +61,4 @@ module.exports.create = (req, res, next) => {
 // };
 
 
-// module.exports.edit = (req, res, next) => {
-//   Product.findById(req.params.id).then((product) => {
-//     res.render('products/form', {
-//       product: product
-//     });
-//   });
-// };
 
-// module.exports.update = (req, res, next) => {
-//   const productId = req.params.id;
-//   const updates = {
-//       name: req.body.name,
-//       price: req.body.price,
-//       imageUrl: req.body.imageUrl,
-//       description: req.body.description
-//   };
-
-//   Product.findByIdAndUpdate(productId, updates).then((product) => {
-//     res.redirect('/products');
-//   });
-// };
-
-// module.exports.delete = (req, res, next) => {
-//   const productId = req.params.id;
-
-//   Product.findByIdAndRemove(productId).then((product) => {
-//     return res.redirect('/products');
-//   });
-// };
