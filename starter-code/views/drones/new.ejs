@@ -1,9 +1,17 @@
-<h2>Create a new drone</h2>
+<% if (drone.isNew) { %>
+  <h2>Create a new drone</h2>
+<% } else { %>
+  <h2>Edit your drone</h2>
+<% } %>
 
-<form class="" action="/drones" method="post">
-  <input type="text" name="name" placeholder="Introduce your drone name">
-  <input type="number" name="propellers" placeholder="Introduce your drone propellers">
-  <input type="number" name="maxSpeed" placeholder="Introduce your drone max speed">
+<% if (drone.isNew) { %>
+  <form action="/drones" method="post">
+<% } else { %>
+  <form action="/drones/<%= drone.id %>" method="post">
+<% } %>
+  <input type="text" name="name" placeholder="Introduce your drone name" value="<%= drone.name %>">
+  <input type="number" name="propellers" placeholder="Introduce your drone propellers" value="<%= drone.propellers %>">
+  <input type="number" name="maxSpeed" placeholder="Introduce your drone max speed" value="<%= drone.maxSpeed %>">
 
   <input type="submit">
 </form>

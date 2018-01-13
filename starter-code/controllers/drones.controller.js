@@ -27,3 +27,24 @@ module.exports.create = (req, res, next) => {
     res.redirect('/drones');
   });
 };
+
+module.exports.edit = (req, res, next) => {
+  Drone.findById(req.params.id).then((drone) => {
+    res.render('drones/new', {
+      drone: drone
+    });
+  });
+};
+
+module.exports.update = (req, res, next) => {
+  const droneId = req.params.id;
+  const updates = {
+      name: req.body.name,
+      propellers: req.body.propellers,
+      maxSpeed: req.body.maxSpeed
+  };
+
+  Drone.findByIdAndUpdate(droneId, updates).then((drone) => {
+    res.redirect('/drones');
+  });
+};

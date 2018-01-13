@@ -22,4 +22,7 @@ router.post('/', dronesController.create);
   // Iteration #3
 //});
 
+router.get('/:id/edit', dronesController.edit);
+router.post('/:id', dronesController.update);
+
 module.exports = router;
