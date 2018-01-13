@@ -9,6 +9,8 @@ const mongoose       = require('mongoose');
 const index          = require('./routes/index');
 const users          = require('./routes/users');
 const drones         = require('./routes/drones');
+//Import DB connection
+require ('./config/db.config');
 
 const app = express();
 
