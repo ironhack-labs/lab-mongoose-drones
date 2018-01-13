@@ -9,6 +9,11 @@
     <p>
       <a href="/drones/<%= drone._id %>/edit">Edit</a>
     </p>
+    <p>
+      <form action="/drones/<%= drone._id %>/delete" method="post">
+        <input type="submit" value="Delete">
+      </form>
+    </p>
   </div>
 
   <hr>

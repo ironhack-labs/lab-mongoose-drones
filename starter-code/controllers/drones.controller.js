@@ -48,3 +48,11 @@ module.exports.update = (req, res, next) => {
     res.redirect('/drones');
   });
 };
+
+module.exports.delete = (req, res, next) => {
+  const droneId = req.params.id;
+
+  Drone.findByIdAndRemove(droneId).then((drone) => {
+    return res.redirect('/drones');
+  });
+};

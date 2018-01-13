@@ -25,4 +25,6 @@ router.post('/', dronesController.create);
 router.get('/:id/edit', dronesController.edit);
 router.post('/:id', dronesController.update);
 
+router.post('/:id/delete', dronesController.delete);
+
 module.exports = router;
