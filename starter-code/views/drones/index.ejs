@@ -1,17 +1,19 @@
 <p>Welcome to NODES</p>
 
 <%  drones.forEach(drone => { %>
-   <h1>
-     Name : <%=drone.name%>
-    </h1>
-    <h2>
-      Propellers: <%=drone.propellers%>
+  <h1>
+    Name :
+    <%=drone.name%>
+  </h1>
+  <h2>
+    Propellers:
+    <%=drone.propellers%>
 
-    </h2>
-    <p>
-       Mas Speed: <%=drone.maxSpeed%>
-    </p>
-<% }); %>
+  </h2>
+  <p>
+    Mas Speed:
+    <%=drone.maxSpeed%>
+  </p>
+  <% }); %>
 
-
-
+  <a href="/drones/new">Add new drone</a>
