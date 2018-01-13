@@ -5,12 +5,11 @@ const logger         = require('morgan');
 const cookieParser   = require('cookie-parser');
 const bodyParser     = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
-const mongoose       = require('mongoose');
 const index          = require('./routes/index');
 const users          = require('./routes/users');
 const drones         = require('./routes/drones');
 
-mongoose.connect('mongodb://localhost/drones-db');
+require('./config/db.config');
 
 const app = express();
 
