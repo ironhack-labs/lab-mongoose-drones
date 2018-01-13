@@ -6,16 +6,8 @@ const dronesController = require('../controllers/drones.controller');
 
 
 router.get('/', dronesController.index);
-
-
-// router.get('/drones', (req, res, next) => {
-//   // Iteration #2
-// });
-
-
-// router.get('/drones/new', (req, res, next) => {
-//   // Iteration #3
-// });
+router.get('/new', dronesController.new);
+router.post('/', dronesController.create);
 
 // router.post('/drones', (req, res, next) => {
 //   // Iteration #3

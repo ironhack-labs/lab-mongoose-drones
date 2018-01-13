@@ -8,6 +8,18 @@ module.exports.index = (req, res, next) => {
   });
 };
 
+module.exports.new = (req, res, next) => {
+  res.render('drones/new');
+};
+
+module.exports.create = (req, res, next) => {
+  const droneData = req.body;
+  const newDrone = new Drone(droneData);
+  newDrone.save().then((drone) => {
+    res.redirect('/drones');
+  })
+};
+
 // module.exports.new = (req, res, next) => {
 //   res.render('products/form', {
 //     product: new Product()
