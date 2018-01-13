@@ -1,0 +1,21 @@
+<h2>
+  Create cucumbers
+</h2>
+
+<% if (drones.isNew) { %>
+  <form action="/drones" method="post">
+<% } else { %>
+  <form action="/drones/<%= drones.id %>" method="post">
+<% } %>
+
+  Name:
+  <input type="text" name="name" value="<%= drones.name %>">
+
+  Propellers:
+  <input type="number" name="propellers" value="<%= drones.propellers %>">
+
+  Max Speed:
+  <input type="text" name="maxSpeed" value="<%= drones.maxSpeed %>">
+
+  <input type="submit"/>
+</form>

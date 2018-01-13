@@ -1,0 +1,9 @@
+<ul> <% drones.forEach((drone) => { %>
+<li>  <%= drone %> <a href='/drones/<%= drone._id%>/edit'> Edit</a>
+<form action='/drones/<%= drone._id%>/delete' method="post">
+  <input type="submit" value="Delete">
+</form>
+  </li>
+<% }) %> </ul>
+
+<a href="/drones/new"> Create a new Drone </a>
