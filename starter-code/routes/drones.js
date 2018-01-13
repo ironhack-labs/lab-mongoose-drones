@@ -6,28 +6,52 @@ const Drone = require('../models/drone.model');
 const router = express.Router();
 
 
-router.get('/drones', (req, res, next) => {
+router.get('/', (req, res, next) => {
   // Iteration #2
   Drone.find({}).then((drones) => {
     res.render('index', {
       drones: drones
     });
   });
-  /*Call the Drone model's find method to retrieve all the drones.
-If there's an error, call the route's next function and return.
-If there isn't an error, render the drones/index view.
-Pass the variable with the array of drones into the view.*/
-
-
 });
 
 
-router.get('/drones/new', (req, res, next) => {
+router.get('/new', (req, res, next) => {
   // Iteration #3
+  res.render('drones/new', {
+    drone: {}
+  })
 });
 
-router.post('/drones', (req, res, next) => {
+
+router.post('/', (req, res, next) => {
   // Iteration #3
+
+  const droneData = req.body;
+
+  const newDrone = new Drone(droneData);
+
+  newDrone.save().then((drone) => {
+    res.redirect('/drones');
+  })
 });
 
-module.exports = router;
+router.post('/', (req, res, next) => {
+      Drone.findById(req.params.id).then((drone) => {
+        res.render('drones/new', {
+          drone: drone
+        });
+      });
+    });
+
+  router.post('/',  (req, res, next) => {
+      const droneId = req.params.id;
+      const updates = {
+        name: req.body.name,
+        propellers: req.body.propellers,
+        maxSpeed: req.body.maxSpeed
+      };
+    });
+
+
+      module.exports = router;
