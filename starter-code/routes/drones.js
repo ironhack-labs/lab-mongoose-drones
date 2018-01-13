@@ -32,4 +32,11 @@ router.post('/', (req, res, next) => {
   })
 });
 
+router.get('/edit/:id', (req, res, next) => {
+  // Iteration #3  
+  let id = req.params.id;
+  res.send(id);
+  // res.render('drones/ ')
+});
+
 module.exports = router;
