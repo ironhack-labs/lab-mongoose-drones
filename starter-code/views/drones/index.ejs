@@ -1,0 +1,10 @@
+<ul id ="drones-list">
+  <% drone.forEach((drone) => { %>
+    <li>
+      <img src="<%= drone.imageUrl %>"/>
+      Name: <%= drone.name %>,
+      Propeller: <%= drone.propellers %>
+      Max Speed: <%= drone.maxSpeed %>
+    </li>
+  <% }) %>
+</ul>

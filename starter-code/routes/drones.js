@@ -3,6 +3,7 @@ const router = express.Router();
 const dronesController = require('../controllers/drone.controller');
 
 router.get('/', dronesController.index);
+
 /*router.get('/drones/new', (req, res, next) => {
   // Iteration #3
 });
