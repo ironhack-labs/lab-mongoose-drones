@@ -2,20 +2,28 @@ const express = require('express');
 
 // require the Drone model here
 
-
+const Drone = require('../models/drone')
 const router = express.Router();
 
+router.get('/', (req, res, next) => {
+  // Hacer búsqueda a bDD
+  console.log("Welcome to drones");
+  Drone.find({}).then((drones) => {
+    res.render('drones/index', {
+      drones: drones
+    });
+  });
+  // Recibir la informació que queremos pintar
 
-router.get('/drones', (req, res, next) => {
-  // Iteration #2
+  // Renderizar la página, enviándole la info
 });
 
 
-router.get('/drones/new', (req, res, next) => {
+router.get('/new', (req, res, next) => {
   // Iteration #3
 });
 
-router.post('/drones', (req, res, next) => {
+router.post('/', (req, res, next) => {
   // Iteration #3
 });
 
