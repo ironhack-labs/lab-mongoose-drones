@@ -5,6 +5,12 @@
 <li>Name: <%= drone.name %></li>
 <li>Propellers: <%= drone.propellers %></li>
 <li>Max Speed: <%= drone.maxSpeed %></li>
+<form action="drones/delete/<%= drone._id %>" method="post">
+<input type="submit" value="Delete" />
+</form>
+<form action="drones/<%= drone._id %>/edit" method="post">
+<input type="submit" value="Edit" />
+</form>
 <br>
 <% }) %>
 
