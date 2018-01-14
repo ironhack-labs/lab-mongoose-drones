@@ -7,17 +7,17 @@ const Drone = require('../models/drone');
 
 const DroneSeed = [
   {
-    name: "Drone de Julio",
+    name: "MX-35  Droneblade",
     propellers: 2,
     maxSpeed: 50
   },{
-    name: "Drone de Carlos",
+    name: "Megablast Hi-Flyer 2067XJ",
     propellers: 4,
     maxSpeed: 60
   },{
-    name: "Drone de Bart",
+    name: "Spydrone Silentfly TROG5000-SH",
     propellers: 6,
-    maxSpeed: 70
+    maxSpeed: 43
   }
 ];
 

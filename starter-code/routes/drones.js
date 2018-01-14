@@ -9,7 +9,8 @@ router.get('/', (req, res, next) => {
   console.log("Displaying drones");
   Drone.find({}).then((drones) => {
     res.render('drones/index', {
-      drones: drones
+      drones: drones,
+      title: 'Drone Database'
     });
   });
 });
@@ -17,7 +18,8 @@ router.get('/', (req, res, next) => {
 
 router.get('/new', (req, res, next) => {
   res.render('drones/new', {
-    drone: new Drone()
+    drone: new Drone(),
+    title: 'Add a new drone to the database'
   });
 });
 

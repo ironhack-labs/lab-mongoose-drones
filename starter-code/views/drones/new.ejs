@@ -4,20 +4,20 @@
   <form action="/drones/<%= drone.id %>" method="post">
 <% } %>
 
-<div>
+<div class="form-element">
   <label for="drone-name"> Model Name: </label>
    <input type="text" name="name" value="<%= drone.name %>">
 </div>
 
-<div>
+<div class="form-element">
    <label for="propellers"> Propellers: </label>
    <input type="number" name="propellers" value="<%= drone.propellers %>">
  </div>
 
- <div>
+ <div class="form-element">
    <label for="max-speed"> Maximum Speed (meters per second): </label>
     <input type="text" name="speed" value="<%= drone.speed %>">
  </div>
 
-<button> Add this drone </button>
+<button class="btn btn-outline-success btn-lg btn-block">Add this drone</button>
 </form>
