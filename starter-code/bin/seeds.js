@@ -6,25 +6,30 @@ const Drone = require ('../models/drone');
 
 const drones = [
   {
-    name: "Phantom 1" ,
-    propellers: 4 ,
-    maxSpeed: 50,
+    name: "Creeper XL 500" ,
+    propellers: 3 ,
+    maxSpeed: 12,
   },
   {
-    name: "Phantom 2" ,
+    name: "Racer 57" ,
+    propellers: 4,
+    maxSpeed: 20,
+  },
+  {
+    name: "Courier 3000i" ,
     propellers: 6,
-    maxSpeed: 70,
-  },
-  {
-    name: "Phantom 3" ,
-    propellers: 8,
-    maxSpeed: 100,
+    maxSpeed: 18,
   }
 ];
 
 Drone.create(drones).then((data) => {
     data.forEach((element) => {
-      console.log(element.name);
-    });
+      console.log(element.id);
+    })
+    // how do I check the error? with the following code it does not work
+    //.catch((err) => {
+    //  console.log(err);
+    //})
+    ;
     mongoose.connection.close(); //duda qué hace
 });
