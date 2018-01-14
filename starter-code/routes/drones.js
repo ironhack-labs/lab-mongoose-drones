@@ -11,7 +11,9 @@ router.get('/', (req, res, next) => {
     res.render('drones/index', {
       drones: drones
     });
-  });
+  }).catch((err) => {  // not sure if this is correct
+    return next(err);
+    });
 });
 
 
