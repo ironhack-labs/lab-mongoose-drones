@@ -27,6 +27,7 @@ build/Release
 node_modules
 
 .vscode/
+.eslintrc/
 
 # Debug log from npm
 npm-debug.log
