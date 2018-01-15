@@ -1,0 +1,26 @@
+<h2>Drone</h2>
+
+<% if (drone.isNew) { %>
+  <form action="/drones" method="post">
+<% } else { %>
+  <form action="/drones/<%= drone.id %>" method="post">
+<% } %>
+
+
+  Name:
+  <input type="text" name="name" value="<%= drone.name %>">
+
+  Propellers:
+  <input type="number" name="propellers" value="<%= drone.propellers %>">
+
+  MaxSpeed:
+  <input type="number" name="maxSpeed" value="<%= drone.maxSpeed %>">
+
+  <input type="submit"/>
+</form>
+
+<a href="/drones/<%= drone._id %>/edit">Edit</a>
+
+<form action="/drones/<%= drone._id %>/delete" method="post">
+  <input type="submit" value="Delete">
+</form>
