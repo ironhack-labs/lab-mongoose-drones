@@ -15,6 +15,9 @@
     <%=drone.maxSpeed%>
   </p>
   <a href="/drones/edit/<%=drone._id%>">Edit</a>
+  <form action="/drones/delete/<%=drone._id%>" method="post">
+    <input type="submit" value="DELETE">
+  </form>
   <% }); %>
-
+<br>
   <a href="/drones/new">Add new drone</a>
