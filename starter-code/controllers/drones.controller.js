@@ -6,9 +6,7 @@ module.exports.index = (req, res, next) => {
   Drone.find({})
   .then(drones => {
     console.log('holi');
-    res.render('drones/index', {
-      drones: drones
-    });
+    res.render('drones/index', {drones});
   });
 };
 
@@ -30,19 +28,15 @@ module.exports.create = (req, res, next) => {
 
 module.exports.edit = (req, res, next) => {
   Drone.findById(req.params.id).then((drone) => {
-    res.render('drones/new', {
-      drone: drone
-    });
+    res.render('drones/new', {drone});
   });
 };
 
 module.exports.update = (req, res, next) => {
   const droneId = req.params.id;
-  const updates = {
-      name: req.body.name,
-      propellers: req.body.propellers,
-      maxSpeed: req.body.maxSpeed
-  };
+  // req.body.hola
+  const {name, propellers, maxSpeed} = req.body;
+  const updates = {name, propellers, maxSpeed};
 
   Drone.findByIdAndUpdate(droneId, updates).then((drone) => {
     res.redirect('/drones');
