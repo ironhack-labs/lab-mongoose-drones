@@ -1,23 +1,24 @@
-<h2>Drones</h2>
+<div class="row">
+  <div class="drones-container col-12">
 
-<% drones.forEach((drone) => { %>
+    <% drones.forEach((drone) => { %>
 
-  <div class="drone-wrapper">
-    <p> <%= drone.name %> </p>
-    <p> <%= drone.propellers %> </p>
-    <p> <%= drone.maxSpeed %> </p>
-    <p>
-      <a href="/drones/<%= drone._id %>/edit">Edit</a>
-    </p>
-    <p>
-      <form action="/drones/<%= drone._id %>/delete" method="post">
-        <input type="submit" value="Delete">
-      </form>
-    </p>
+    <div class="drone-wrapper">
+      <h3> <%= drone.name %> </h3>
+      <p>Propellers: <strong><%= drone.propellers %></strong> </p>
+      <p>Max speed (m/s): <strong><%= drone.maxSpeed %></strong> </p>
+      <div class="buttons">
+        <a href="/drones/<%= drone._id %>/edit" class="btn btn-orange">Edit information</a>
+        <form action="/drones/<%= drone._id %>/delete" method="post" class="btn btn-red">
+          <input type="submit" value="Delete">
+        </form>
+      </div>
+    </div>
+
+    <% }) %>
+
+    <a href="drones/new" class="btn btn-green">Create a new drone</a>
+
   </div>
 
-  <hr>
-
-<% }) %>
-
-<a href="drones/new">Create a new drone</a>
+</div>

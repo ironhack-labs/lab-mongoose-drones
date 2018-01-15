@@ -5,13 +5,17 @@
 <% } %>
 
 <% if (drone.isNew) { %>
-  <form action="/drones" method="post">
+  <form action="/drones" method="post" class="drone-info-form">
 <% } else { %>
-  <form action="/drones/<%= drone.id %>" method="post">
+  <form action="/drones/<%= drone.id %>" method="post" class="drone-info-form">
 <% } %>
-  <input type="text" name="name" placeholder="Introduce your drone name" value="<%= drone.name %>">
-  <input type="number" name="propellers" placeholder="Introduce your drone propellers" value="<%= drone.propellers %>">
-  <input type="number" name="maxSpeed" placeholder="Introduce your drone max speed" value="<%= drone.maxSpeed %>">
+  <input type="text" name="name" placeholder="Introduce your drone name" value="<%= drone.name %>" class="field">
+  <input type="number" name="propellers" placeholder="Introduce your drone propellers" value="<%= drone.propellers %>" class="field">
+  <input type="number" name="maxSpeed" placeholder="Introduce your drone max speed" value="<%= drone.maxSpeed %>" class="field">
 
-  <input type="submit">
+  <% if (drone.isNew) { %>
+    <input type="submit" class="btn btn-green" value="Create">
+  <% } else { %>
+    <input type="submit" class="btn btn-green" value="Edit">
+  <% } %>
 </form>
