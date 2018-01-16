@@ -1,0 +1,24 @@
+<ul id ="drones-list">
+  <% drone.forEach((drone) => { %>
+    <li>
+      <img src="<%= drone.imageUrl %>"/>
+      <div>
+        <li>Name: <%= drone.name %></li>
+        <li>Propeller: <%= drone.propellers %></li>
+        <li>Max Speed: <%= drone.maxSpeed %></li>
+      </div>
+    </li>
+    <br>
+
+    <form class="" action="drones/<%= drone.id %>/delete" method="post">
+      <button type="submit" name="button">DELETE</button>
+    </form>
+
+    <br>
+    <a href="drones/<%= drone.id %>/edit">Edit</a>
+
+    <hr>
+    <br>
+
+  <% }) %>
+</ul>
