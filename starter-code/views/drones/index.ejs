@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Propellers</th>
+      <th scope="col">MaxSpeed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% drones.forEach((drone) => { %>
+      <tr>
+        <td><%= drone.name %></td>
+        <td><%= drone.propellers %></td>
+        <td><%= drone.maxSpeed %></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
