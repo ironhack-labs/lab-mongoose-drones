@@ -1,17 +1,17 @@
 <table class="table">
   <thead>
     <tr>
-      <th class="text-center" scope="col"><h2>Name</h2></th>
-      <th class="text-center" scope="col"><h2>Propellers</h2></th>
-      <th class="text-center" scope="col"><h2>MaxSpeed</h2></th>
+      <th class="text-center col-xs-12 col-md-4" scope="col"><h2>Name</h2></th>
+      <th class="text-center col-xs-12 col-md-4" scope="col"><h2>Propellers</h2></th>
+      <th class="text-center col-xs-12 col-md-4" scope="col"><h2>MaxSpeed</h2></th>
     </tr>
   </thead>
   <tbody>
     <% drones.forEach((drone) => { %>
       <tr>
-        <td><%= drone.name %></td>
-        <td class="text-center"><%= drone.propellers %></td>
-        <td class="text-center"><%= drone.maxSpeed %></td>
+        <td class="col-xs-12 col-md-4"><%= drone.name %></td>
+        <td class="text-center col-xs-12 col-md-4"><%= drone.propellers %></td>
+        <td class="text-center col-xs-12 col-md-4"><%= drone.maxSpeed %></td>
       </tr>
     <% }) %>
   </tbody>
