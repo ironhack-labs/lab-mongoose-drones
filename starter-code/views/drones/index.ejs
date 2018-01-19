@@ -12,6 +12,11 @@
         <td class="col-xs-12 col-md-4"><%= drone.name %></td>
         <td class="text-center col-xs-12 col-md-4"><%= drone.propellers %></td>
         <td class="text-center col-xs-12 col-md-4"><%= drone.maxSpeed %></td>
+        <td>
+          <form action="/drones/<%= drone._id %>" method="post">
+            <input type="submit" value="Delete">
+          </form>
+        </td>
       </tr>
     <% }) %>
   </tbody>

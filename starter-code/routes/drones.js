@@ -9,4 +9,6 @@ router.get('/drones', droneController.show);
 router.get('/drones/new', droneController.new);
 router.post('/drones', droneController.create);
 
+router.post('/drones/:id', droneController.delete);
+
 module.exports = router;
