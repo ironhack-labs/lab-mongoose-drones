@@ -10,11 +10,12 @@ const cookieParser   = require('cookie-parser');
 const bodyParser     = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
 const mongoose       = require('mongoose');
-const mongooseDB     = require('./config/db.config'); // Import DB config - 
+
+require('./config/db.config'); // Import DB config - 
 // asignarlo a una constante me lo he inventado pero me pone nerviosos que todos los requiere van así y este no. es correcto?? 
 
-const indexRoute     = require('./routes/index');
-const dronesRoute    = require('./routes/drones');
+const index = require('./routes/index.routes');
+const drones = require('./routes/drones.routes');
 
 const app = express();
 app.locals.title = 'Los Drones de Ironhack';
