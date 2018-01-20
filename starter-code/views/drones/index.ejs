@@ -1,0 +1,27 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="text-center col-xs-12 col-md-4" scope="col"><h2>Name</h2></th>
+      <th class="text-center col-xs-12 col-md-4" scope="col"><h2>Propellers</h2></th>
+      <th class="text-center col-xs-12 col-md-4" scope="col"><h2>MaxSpeed</h2></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% drones.forEach((drone) => { %>
+      <tr>
+        <td class="col-xs-12 col-md-4"><%= drone.name %></td>
+        <td class="text-center col-xs-12 col-md-4"><%= drone.propellers %></td>
+        <td class="text-center col-xs-12 col-md-4"><%= drone.maxSpeed %></td>
+        <td>
+          <form action="/drones/<%= drone._id %>" method="post">
+            <input type="submit" value="Delete">
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+<div class="text-center">
+  <a href="drones/new" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Create New</a>
+</div>
