@@ -3,6 +3,27 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+h2{
+  text-align: center;
+}
 a {
-  color: #00B7FF;
+color: red;
+padding: 154px;
+}
+
+.drone{
+padding-left: 360px;
+padding-top: 100px;
+}
+
+.row .addRow{
+  padding-top: 50px;
+}
+
+.container-fluid {
+  padding-top: 50px;
+}
+
+ul{
+  list-style: none;
 }
