@@ -1,0 +1,11 @@
+<h2>Drone list</h2>
+<a href="/">home</a><br>
+<a href="/drones/new">add new drone</a>
+<ul>
+  <% drones.forEach( (drone) => { %> 
+  <li>
+    name: <%= drone.name %> <br> propellers: <%= drone.propellers %> <br> max speed: <%= drone.maxSpeed %>
+  </li>
+  <br>
+  <% }) %>
+</ul>
