@@ -1,0 +1,16 @@
+<h2> Your drones </h2>
+
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="/">home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/drones/new">add new drone</a>
+  </li>
+</ul>
+
+<ul>
+  <% drone.forEach((aDrone) => { %>
+    <li> Model: <%= aDrone.name %> | Propellers: <%= aDrone.propellers %> | MaxSpeed: <%= aDrone.maxSpeed %> m/s</li>
+  <% }) %>
+</ul>
