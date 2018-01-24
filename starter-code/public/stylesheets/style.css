@@ -1,6 +1,10 @@
 body {
+  font-family: 'Supermercado One', cursive;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */ 
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  text-align: center;
 }
 
 a {

@@ -1,0 +1,23 @@
+<h2>Add a new drone to your collection</h2>
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="/">home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/drones/new">add new drone</a>
+  </li>
+</ul>
+
+<form action="/drones" method="post">
+
+  <label for="name">Model name: </label>
+  <input type="text" id="name" name="name">
+
+  <label for="propellers">Propellers: </label>
+  <input type="number" id="propellers" name="propellers">
+
+  <label for="maxSpeed">Maximum speed (meters per second) </label>
+  <input type="number" id="maxSpeed" name="maxSpeed">
+
+  <button type="submit" class="btn btn-success">Create Drone</button>
+</form>
