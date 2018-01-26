@@ -6,3 +6,22 @@ body {
 a {
   color: #00B7FF;
 }
+
+.panel-heading {
+  background-color: rgb(126, 131, 148);
+}
+
+.panel-body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.panel-title {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

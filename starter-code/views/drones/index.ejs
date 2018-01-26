@@ -1,0 +1,36 @@
+<article id="drones">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Drones List</h2>
+      <a class="btn btn-primary pull-right" href="/drones/new">New Drone</a>
+    </div>
+  </div>
+  <hr>
+
+  <% drones.reverse().forEach((drone) => { %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title text-white"><%= drone.droneName %></h3>
+      </div>
+      <div class="panel-body">
+        <dl>
+          <dt>Propellers</dt>
+          <dd><%= drone.propellers %></dd>
+        </dl>
+        <dl>
+          <dt>Max Speed</dt>
+          <dd><%= drone.maxSpeed %></dd>
+        </dl>
+        <dl>
+          <dt>Image</dt>
+          <img src="<%= drone.image %>">
+        </dl>
+        <div class="buttons">
+          <a class="btn btn-secondary" href="/drones/edit">Edit</a>
+          <a class="btn btn-danger" href="/drones/delete">Delete</a>
+        </div>
+      </div>
+    </div>
+    <hr>
+  <% }) %>
+</article>
