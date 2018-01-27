@@ -1,0 +1,25 @@
+<h2>New Drone</h2>
+
+<form method="post" action="/drones">
+  <div class="form-group">
+    <label for="drone-name"> Model Name: </label>
+    <input type="text" name="droneName" id="drone-name" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="propellers"> Propellers: </label>
+    <input type="number" name="propellers" id="propellers" class="form-control" type="number">
+  </div>
+
+  <div class="form-group">
+    <label for="max-speed"> Maximum Speed (meters per second): </label>
+    <input type="number" name="maxSpeed" id="max-speed" class="form-control" type="number">
+  </div>
+
+  <div class="form-group">
+    <label for="image"> Image URL (meters per second): </label>
+    <input type="text" name="image" id="image" class="form-control">
+  </div>
+
+  <button class="btn btn-success"> Add this drone </button>
+</form>
