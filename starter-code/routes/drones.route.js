@@ -8,6 +8,9 @@ const router = express.Router();
 
 router.get('/', dronesController.index);
 router.get('/new', dronesController.new);
+router.get('/:id/edit', dronesController.edit);
+router.post('/:id/edit', dronesController.update);
 router.post('/', dronesController.create);
+router.get('/:id/delete', dronesController.delete);
 
 module.exports = router;

@@ -24,3 +24,29 @@ module.exports.create = (req, res, next) => {
       return res.redirect('/drones');
     });
 };
+
+module.exports.edit = (req, res, next) => {
+   Drone.findById(req.params.id).then((drone) => {
+     res.render('drones/edit', {drone});
+   });
+};
+
+module.exports.update = (req, res, next) => {
+   const droneId = req.params.id;
+   // req.body.hola
+   const {droneName, propellers, maxSpeed} = req.body;
+   const updates = {droneName, propellers, maxSpeed};
+
+   Drone.findByIdAndUpdate(droneId, updates).then((drone) => {
+     res.redirect('/drones');
+   });
+};
+
+module.exports.delete = (req, res, next) => {
+   const droneId = req.params.id;
+   console.log(droneId);
+
+   Drone.findByIdAndRemove(droneId).then((drone) => {
+     return res.redirect('/drones');
+   });
+};
