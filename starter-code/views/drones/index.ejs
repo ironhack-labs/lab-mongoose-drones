@@ -1,0 +1,13 @@
+<!-- convection -->
+<h2>List of drones</h2>
+
+<ul>
+    <% drones.forEach( (dron) =>{ %>
+        <li>
+            <%= dron.droneName  %>
+                <%= dron.propellers %>
+                    <%= dron.speed %>
+        </li>
+        <% }); %>
+</ul>
+<a href="/drones/">Drones</a>
