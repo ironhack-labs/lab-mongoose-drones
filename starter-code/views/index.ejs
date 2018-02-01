@@ -1,1 +1,9 @@
 <p>Welcome to <%= title %></p>
+<h2>ALL OUR DRONES</h2>
+<ul>
+    <% Drones.forEach((dron) => { %>
+        <li>
+        <%= dron.name %> - <%= dron.propellers %> - <%= dron.maxSpeed %>
+        </li>
+    <%  }) %>
+</ul>
