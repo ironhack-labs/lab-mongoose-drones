@@ -10,7 +10,7 @@ const index          = require('./routes/index');
 const users          = require('./routes/users');
 const drones         = require('./routes/drones');
 
-mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect('mongodb://localhost/ih-drones');
 
 const app = express();
 
@@ -34,7 +34,7 @@ app.use('/drones', drones);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
