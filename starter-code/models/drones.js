@@ -8,3 +8,5 @@ const droneSchema = new Schema({
 });
 
 const Drone = mongoose.model("Drone", droneSchema);
+
+module.exports = Drone;
