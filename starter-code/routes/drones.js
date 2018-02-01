@@ -27,10 +27,31 @@ router.get('/', (req, res, next) => {
 
 router.get('/new', (req, res, next) => {
   // Iteration #3
+  res.render('drones/new');
 });
 
 router.post('/', (req, res, next) => {
-  // Iteration #3
+  // let name = req.body.name;
+  // let propellers = req.body.propellers;
+  // let maxSpeed = req.body.maxSpeed;
+
+  // res.send(`Name: ${name}, Propellers: ${propellers}, Max Speed: ${maxSpeed}`);
+
+  const droneInfo = {
+    name: req.body.name,
+    propellers: req.body.propellers,
+    maxSpeed: req.body.maxSpeed
+  };
+
+  // Create a new Product with the params
+  const newDrone = new Drone(droneInfo);
+
+  newDrone.save((err) => {
+    if (err) {
+      return next(err);
+    }
+    return res.redirect('/drones');
+  });
 });
 
 module.exports = router;
