@@ -34,7 +34,7 @@ Drone.create(drones, (err, docs) => {
         throw err;
     }
 
-    docs.forEach((drone) =>{
+    docs.forEach((drone) => {
         console.log(drone.name);
     });
     mongoose.connection.close();
