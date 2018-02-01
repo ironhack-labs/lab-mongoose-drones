@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const DroneSchema = new Schema({
     name: String,
-    propellers: Number,
+    proppellers: Number,
     maxSpeed: Number,
 });
 
