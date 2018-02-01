@@ -11,6 +11,7 @@ const users          = require('./routes/users');
 const drones         = require('./routes/drones');
 
 mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect('mongodb://localhost/drone');
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(expressLayouts);
-app.locals.title = 'Drnz';
+app.locals.title = 'Create new drone';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
