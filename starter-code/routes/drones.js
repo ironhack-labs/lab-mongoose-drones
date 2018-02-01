@@ -12,16 +12,20 @@ router.get('/', (req, res) => {
       drones:drones
     })
   })
-  // Iteration #2
 });
 
 
-router.get('/drones/new', (req, res, next) => {
-  // Iteration #3
+router.get('/new', (req, res) => {
+  res.render("drones/new");
 });
 
-router.post('/drones', (req, res, next) => {
-  // Iteration #3
+router.post('/new', (req, res, next) => {
+  const {name,propellers,maxSpeed} = req.body;
+  const drone = new Drone({name,propellers,maxSpeed});
+  drone.save(err => {
+    if(err){return next(err)}
+    res.redirect("/");
+  })
 });
 
 module.exports = router;
