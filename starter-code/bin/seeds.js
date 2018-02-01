@@ -34,6 +34,6 @@ drones.forEach( p => {
     })
 });
 
-setTimeout( function () {
+setTimeout(() => {
     mongoose.disconnect();
   }, 1000);
