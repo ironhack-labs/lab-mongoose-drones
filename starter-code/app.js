@@ -9,8 +9,10 @@ const mongoose       = require('mongoose');
 const index          = require('./routes/index');
 const users          = require('./routes/users');
 const drones         = require('./routes/drones');
+const {dbUrl}        = require("./config");
 
-mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect(dbUrl);
+
 
 const app = express();
 
