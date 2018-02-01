@@ -38,9 +38,9 @@ router.post('/', (req, res, next) => {
 
   droneNew.save((err) => {
     if (err){
-      next(err);
+      return next(err);
     } else {
-      res.redirect("drones");
+      res.redirect('/drones');
     }
   })
 });
