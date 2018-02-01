@@ -1,0 +1,13 @@
+<h2>Drones Index</h2>
+<div class="drones-list">
+  <% for (var i = 0; i < drones.length; i++ ){ %>
+    <div class="drone-item">
+        <p> <%= drones[i].name %> </p>
+        <p> <%= drones[i].propellers %> </p>
+        <p> <%= drones[i].maxSpeed %> </p>
+    </div>
+  <% } %>
+</div>
+<div>
+  <a href="/drones/new">Create a new Drone</a>
+</div>

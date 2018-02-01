@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+.drone-item {
+  display: inline-block;
+  padding: 20px;
+  background: #eee;
+}
