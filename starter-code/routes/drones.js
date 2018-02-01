@@ -1,12 +1,20 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const Drone = require('../models/Drone');
 
-// require the Drone model here
+mongoose.connect('mongodb://localhost/drones-dev').then(() => console.log("Conectado!"));
 
 const router = express.Router();
 
 
 router.get('/drones', (req, res, next) => {
-  // Iteration #2
+  Drone.find(, (err, drones) => {
+    if (err) {
+      return next(err);
+    } else {
+      res.render('drones/index', drones);
+    }
+  })
 });
 
 
