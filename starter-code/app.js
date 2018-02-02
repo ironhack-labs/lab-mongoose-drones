@@ -50,4 +50,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+const Drone = mongoose.model('Drone', {name: String, propellers: Number, maxSpeed: Number})
+
 module.exports = app;

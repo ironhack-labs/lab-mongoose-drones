@@ -7,6 +7,11 @@ const router = express.Router();
 
 router.get('/drones', (req, res, next) => {
   // Iteration #2
+  Dron.find().exec((err, drones)=>{
+    res.render('drones/index',{
+      drones:drones
+    })
+  })
 });
 
 
