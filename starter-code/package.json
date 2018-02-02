@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
@@ -12,8 +13,16 @@
     "ejs": "~2.5.2",
     "express": "~4.14.0",
     "express-ejs-layouts": "^2.2.0",
-    "mongoose": "^4.7.7",
+    "mongoose": "^4.13.10",
     "morgan": "~1.7.0",
+    "nodemon": "^1.14.11",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "main": "app.js",
+  "bin": {
+    "solution-code": "seeds.js"
+  },
+  "author": "Alberto y Robert",
+  "license": "ISC",
+  "description": ""
 }
