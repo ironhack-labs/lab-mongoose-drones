@@ -10,7 +10,7 @@ const index          = require('./routes/index');
 const users          = require('./routes/users');
 const drones         = require('./routes/drones');
 
-mongoose.connect('mongodb://localhost/drones-dev');
+mongoose.connect('mongodb://localhost/drones-dev').then( () => { console.log("Conectado a BBDD")});
 
 const app = express();
 
@@ -51,3 +51,6 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+app.listen(3000, () => {
+  console.log('My first app listening on port 3000!')
+ });
