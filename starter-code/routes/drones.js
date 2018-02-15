@@ -1,3 +1,5 @@
+import { EDESTADDRREQ } from 'constants';
+
 const express = require('express');
 
 // require the Drone model here
@@ -14,13 +16,21 @@ router.get('/', (req, res, next) => {
   //next();
 });
 
-
-router.get('/drones/new', (req, res, next) => {
-  // Iteration #3
+ // Iteration #3
+ router.get('/new', (req, res, next) => {
+ res.render("new");
 });
 
-router.post('/drones', (req, res, next) => {
-  // Iteration #3
+
+router.post('/new', (req, res, next) => {
+  const addDrone = new Drone(
+    { name:req.body.name,
+      propellers:req.body.propellers,
+      maxSpeed:req.body.maxSpeed
+    })
+   addDrone.save();
+   res.send("Drone Added");
 });
+
 
 module.exports = router;
