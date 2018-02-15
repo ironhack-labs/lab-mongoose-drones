@@ -1,0 +1,16 @@
+<video autoplay loop muted poster="screenshot.jpg" id="background">
+        <source src="../movie/drone-background.mp4" type="video/mp4">
+    </video>
+
+<h2 style="color:#fff">Drones</h2>
+
+<ul>
+  <% drones.forEach((drone) => { %>
+    <!-- display info from aDrone -->
+    <li>
+    	<%= drone.name %> <%= drone.propellers %> <%= drone.maxSpeed %>
+    </li>
+  <% }) %>
+</ul>
+
+<button><a href="/drones/new">Add Drone</a></button>
