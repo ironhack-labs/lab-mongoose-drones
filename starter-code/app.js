@@ -19,6 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(expressLayouts);
+app.set("layout", "layouts/main-layout")
 app.locals.title = 'Drnz';
 
 // uncomment after placing your favicon in /public
@@ -51,3 +52,9 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+//Esto escucha!
+app.listen(3000, function(err){
+  if(err) console.log(err);
+  console.log("Tu servidor esta funcionando");
+})
