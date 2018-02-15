@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <a href="/drones/new">Agrega tu Drone</a>
+
+        <h2>Droooonessss!</h2>
+       <% Drones.forEach(function(element, index){%>
+        <br />
+            <p>Name: <%=element.name%></p>
+            <p>Propellers: <%=element.propellers%></p>
+            <p>Max Speed: <%=element.maxSpeed%></p>
+            <% }) %>
+    </body>
+</html>
