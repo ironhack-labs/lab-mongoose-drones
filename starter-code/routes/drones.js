@@ -7,8 +7,11 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
   console.log('holaaa')
-  res.render('drones/index')
+  Drone.find({}, (err, result) => {
+  res.render('drones/index', {drones:result})
+  })
 });
+
 
 
 router.get('/drones/new', (req, res, next) => {
