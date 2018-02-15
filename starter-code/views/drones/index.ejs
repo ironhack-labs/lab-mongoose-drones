@@ -1,0 +1,9 @@
+<h2>Drones</h2>
+
+<% drones.forEach(function (element){%>
+  <p>Name: <%=element.name%></p>
+  <p>Number of propellers: <%=element.propellers%></p>
+  <p>Max Speed: <%=element.maxSpeed%></p>
+<% }); %>
+
+<a href="/drones/drones/new">Make a Drone</a>
