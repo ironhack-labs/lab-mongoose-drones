@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+<video autoplay loop muted poster="screenshot.jpg" id="background">
+  <source src="../movie/dronebackground.mp4" type="video/mp4">
+</video>
+
 <html>
   <head>
     <title><%= title %></title>
+    <link rel='stylesheet' href="https://bootswatch.com/4/lumen/bootstrap.min.css" />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <h1 style="color:#fff"><%= title %></h1>
     <%- body %>
   </body>
 </html>
