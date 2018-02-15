@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Drones App</title>
+    <style>
+        body {
+            padding: 50px;
+            font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+            background-image: url("../droneBackground.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+        }
+
+            a {
+            color: #00B7FF;
+            }
+    </style>
+  </head>
+  <body>
+    <h2>Add a New Drone</h2>
+
+    <form action="/drones" method="POST">
+        <input id="name" name="name" type="text" placeholder="Name">
+    
+        <input id="propellers" name="propellers" type="number" placeholder="Number of Propellers">
+    
+        <input id="maxSpeed" name="maxSpeed" type="number" placeholder="Max Speed">
+    
+        <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
+
