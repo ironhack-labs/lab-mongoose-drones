@@ -29,15 +29,17 @@ router.get('/drones/new', (req, res, next) => {
 router.post('/drones', (req, res, next) => {
   // Iteration #3
   const droneInfo = {
-    name: req.body.name,
-    propellers: req.body.propellers,
-    maxSpeed: req.body.maxSpeed,
+      name: req.body.name,
+      propellers: req.body.propellers,
+      maxSpeed: req.body.maxSpeed,
   }
   const newDrone = new Drone(droneInfo);
 
   newDrone.save( (err) => {
-    if (err) { return next(err) }
-    return res.redirect('/drones');
+      if (err) { 
+        return next(err) 
+      }
+      return res.redirect('/drones');
   });
 });
 
