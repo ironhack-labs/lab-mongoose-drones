@@ -49,6 +49,15 @@ router.post('/:id', (req, res, next) => {
     });
   });
 });
+
+router.post('/:id/delete', (req, res, next) => {
+  const id = req.params.id;
+  Drone.findByIdAndRemove(id, (err, drone) => {
+    if (err) throw next(err);
+    console.log(`${drone.name} has been deleted!`);
+    res.redirect('/drones/');
+  });
+});
 router.get('/new', (req, res, next) => {
   res.render('drones/new');
 });
