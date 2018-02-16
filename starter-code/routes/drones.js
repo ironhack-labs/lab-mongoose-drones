@@ -1,21 +1,64 @@
 const express = require('express');
-
-// require the Drone model here
+const Drone = require('../models/drone');
 
 const router = express.Router();
 
+router
+  .route('/')
+  .get((req, res, next) => {
+    Drone.find({}, (err, drones) => {
+      if (err) throw next(err);
+      res.render('drones/index', { drones });
+    });
+  })
+  .post((req, res, next) => {
+    const droneData = {
+      name: req.body.name,
+      propellers: req.body.propeller,
+      maxSpeed: req.body.maxSpeed,
+    };
+    const newDrone = new Drone(droneData);
+    newDrone.save(err => {
+      next(err);
+    });
+    res.redirect('/drones');
+  });
 
-router.get('/drones', (req, res, next) => {
-  // Iteration #2
+router.get('/new', (req, res, next) => res.render('drones/new'));
+router.get('/edit', (req, res) => res.render('drones/edit'));
+
+router.get('/:id/edit', (req, res, next) => {
+  const id = req.params.id;
+  Drone.findById(id, (err, drone) => {
+    if (err) throw next(err);
+    res.render('drones/edit', { drone });
+  });
 });
 
+router.post('/:id', (req, res, next) => {
+  const id = req.params.id;
 
-router.get('/drones/new', (req, res, next) => {
-  // Iteration #3
+  Drone.findById(id, (err, drone) => {
+    if (err) throw next(err);
+    const updatedDroneData = {
+      name: req.body.name,
+      propellers: req.body.propeller,
+      maxSpeed: req.body.maxSpeed,
+    };
+    Drone.findByIdAndUpdate(id, updatedDroneData, (err, drone) => {
+      if (err) throw next(err);
+      return res.redirect('/drones');
+    });
+  });
 });
 
-router.post('/drones', (req, res, next) => {
-  // Iteration #3
+router.post('/:id/delete', (req, res, next) => {
+  const id = req.params.id;
+  Drone.findByIdAndRemove(id, (err, drone) => {
+    if (err) throw next(err);
+    console.log(`${drone.name} has been deleted!`);
+    res.redirect('/drones/');
+  });
 });
 
 module.exports = router;
