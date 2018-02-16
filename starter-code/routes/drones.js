@@ -23,7 +23,6 @@ router.get('/new', (req, res, next) => {
 })
 .post('/new', (req, res, next) => {
   // Iteration #3
-  if(err) return next;
     const drone = new Drone({
         name:req.body.name,
         propellers:req.body.propellers,
