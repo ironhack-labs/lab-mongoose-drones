@@ -1,0 +1,9 @@
+<!-- products/index.ejs -->
+
+<ul>
+    <% drones.forEach((drone) => { %>
+      <li>
+        <%= drone.name %> - <%= drone.maxSpeed %>
+      </li>
+    <%  }) %>
+  </ul>
